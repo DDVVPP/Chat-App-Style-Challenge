@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import './App.css';
 
@@ -15,12 +15,17 @@ const Wrapper = styled.div`
 `;
 
 const DirectMessaging = () => {
+  const [profile, setProfile] = useState(false);
+  const [friend, setFriend] = useState({});
+
   return (
     <Wrapper>
       <NavigationPanel />
-      <FriendListPanel />
-      <ChatPanel />
-      <ProfilePanel />
+      <FriendListPanel setProfile={setProfile} profile={profile} setFriend={setFriend} />
+
+      {profile
+        ? [<ChatPanel friendMessages={friend.messagesReceived} />, <ProfilePanel friend={friend} />]
+        : null}
     </Wrapper>
   );
 };

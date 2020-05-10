@@ -7,9 +7,21 @@ const Wrapper = styled.div`
   background-color: white;
   border-radius: 1rem;
   margin-top: 3%;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 `;
 const ContentWrapper = styled.div`
   margin: 3%;
+`;
+const Button = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition-duration: 0.4s;
+  &:hover {
+    background-color: #292f4c;
+    color: white;
+  }
 `;
 const ProfileSummaryWrapper = styled.div`
   display: flex;
@@ -26,33 +38,44 @@ const ImageUser = styled.img`
   height: 10%;
   margin-right: 2%;
 `;
-const NameText = styled.p`
+const NameText = styled.h1`
   font-size: 18px;
+  text-align: left;
 `;
 const GreyText = styled.p`
   opacity: 50%;
 `;
 const ParagraphText = styled.p`
   fon-size: 12px;
+  text-align: left;
 `;
 
-const FriendCard = ({ friend }) => {
-  console.log(friend);
+const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
+  const ChatAndProfile = () => {
+    setProfile(!profile);
+    setFriend(selectedFriend);
+
+    // return <ProfilePanel />;
+  };
   return (
     <Wrapper>
-      <ContentWrapper>
-        <ProfileSummaryWrapper>
-          <ImageUser src={friend.profilePhoto} alt="profile" />
-          <NameTimeWrapper>
-            <NameText>
-              {friend.firstName} {friend.lastName}
-              <GreyText>{friend.status}</GreyText>
-            </NameText>
-            <GreyText>{friend.timeStamp}</GreyText>
-          </NameTimeWrapper>
-        </ProfileSummaryWrapper>
-        <ParagraphText>{friend.messagesReceived[friend.messagesReceived.length - 1]}</ParagraphText>
-      </ContentWrapper>
+      <Button onClick={ChatAndProfile}>
+        <ContentWrapper>
+          <ProfileSummaryWrapper>
+            <ImageUser src={selectedFriend.profilePhoto} alt="profile" />
+            <NameTimeWrapper>
+              <NameText>
+                {selectedFriend.firstName} {selectedFriend.lastName}
+                <GreyText>{selectedFriend.status}</GreyText>
+              </NameText>
+              <GreyText>{selectedFriend.timeStamp}</GreyText>
+            </NameTimeWrapper>
+          </ProfileSummaryWrapper>
+          <ParagraphText>
+            {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
+          </ParagraphText>
+        </ContentWrapper>
+      </Button>
     </Wrapper>
   );
 };

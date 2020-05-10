@@ -7,19 +7,22 @@ import FriendCard from './FriendCard';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #292f4c;
   width: 32vw;
   margin: 2%;
 `;
 
-const FriendListPanel = () => {
+const FriendListPanel = ({ setProfile, profile, setFriend }) => {
   return (
     <Wrapper>
-      {friends.map((friend) => {
+      {friends.map((selectedFriend) => {
         return (
-          <div>
-            <FriendCard friend={friend} />
-          </div>
+          <FriendCard
+            key={selectedFriend.userdId}
+            selectedFriend={selectedFriend}
+            setProfile={setProfile}
+            profile={profile}
+            setFriend={setFriend}
+          />
         );
       })}
     </Wrapper>

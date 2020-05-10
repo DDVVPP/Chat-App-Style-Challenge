@@ -15,23 +15,30 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 7vw;
 `;
+const CenterButtonWrapper = styled.div`
+  margin-top: 15vh;
+`;
 const Button = styled.button`
   width: 100%;
   border: none;
   background: none;
   margin-bottom: 5vh;
 `;
+const UserButtonWrapper = styled.div`
+  margin-top: 20%;
+`;
 const ButtonUser = styled.button`
+  width: 100%;
   border: none;
   background: none;
-  margin-bottom: 10vh;
-  margin-top: 20%;
+`;
+const ButtonSettingsWrapper = styled.div`
+  // margin-top: 10vh;
 `;
 const ButtonSettings = styled.button`
   width: 100%;
   border: none;
   background: none;
-  padding-top: 30vh;
 `;
 const Image = styled.img`
   width: 25%;
@@ -45,30 +52,36 @@ const ImageUser = styled.img`
 const NavigationPanel = () => {
   return (
     <Wrapper>
-      <ButtonUser>
-        <ImageUser src={currentUser} alt="current user" />
-      </ButtonUser>
-      <Button>
-        <Image src={home} alt="home" />
-      </Button>
-      <Button>
-        <Image src={sendGrey} alt="sendGrey" />
-      </Button>
-      <Button>
-        <Image src={inbox} alt="inbox" />
-      </Button>
-      <Button>
-        <Image src={users} alt="users" />
-      </Button>
-      <Button>
-        <Image src={notifications} alt="notifications" />
-      </Button>
-      <Button>
-        <Image src={options} alt="options" />
-      </Button>
-      <ButtonSettings>
-        <Image src={settings} alt="settings" />
-      </ButtonSettings>
+      <UserButtonWrapper>
+        <ButtonUser>
+          <ImageUser src={currentUser} alt="current user" />
+        </ButtonUser>
+      </UserButtonWrapper>
+      <CenterButtonWrapper>
+        <Button>
+          <Image src={home} alt="home" />
+        </Button>
+        <Button>
+          <Image src={sendGrey} alt="sendGrey" />
+        </Button>
+        <Button>
+          <Image src={inbox} alt="inbox" />
+        </Button>
+        <Button>
+          <Image src={users} alt="users" />
+        </Button>
+        <Button>
+          <Image src={notifications} alt="notifications" />
+        </Button>
+        <Button>
+          <Image src={options} alt="options" />
+        </Button>
+      </CenterButtonWrapper>
+      <ButtonSettingsWrapper>
+        <ButtonSettings>
+          <Image src={settings} alt="settings" />
+        </ButtonSettings>
+      </ButtonSettingsWrapper>
     </Wrapper>
   );
 };
