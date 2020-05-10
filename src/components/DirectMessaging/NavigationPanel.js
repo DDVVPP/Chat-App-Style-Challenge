@@ -1,31 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import home from '../assets/icons/home.png';
-import inbox from '../assets/icons/inbox.png';
-import notifications from '../assets/icons/notifications.png';
-import options from '../assets/icons/options.png';
-import sendGrey from '../assets/icons/sendGrey.png';
-import settings from '../assets/icons/settings.png';
-import users from '../assets/icons/users.png';
-import currentUser from '../assets/users/MainUser.png';
+import home from '../../assets/icons/home.png';
+import inbox from '../../assets/icons/inbox.png';
+import notifications from '../../assets/icons/notifications.png';
+import options from '../../assets/icons/options.png';
+import sendGrey from '../../assets/icons/sendGrey.png';
+import settings from '../../assets/icons/settings.png';
+import users from '../../assets/icons/users.png';
+import currentUser from '../../assets/users/MainUser.png';
 
 const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #292f4c;
   height: 100vh;
   width: 7vw;
 `;
 const CenterButtonWrapper = styled.div`
-  margin-top: 15vh;
+  margin-bottom: 5vh;
 `;
 const Button = styled.button`
   width: 100%;
   border: none;
   background: none;
   margin-bottom: 5vh;
+  cursor: pointer;
 `;
 const UserButtonWrapper = styled.div`
-  margin-top: 20%;
+  margin-top: 5vh;
 `;
 const ButtonUser = styled.button`
   width: 100%;
@@ -33,7 +37,7 @@ const ButtonUser = styled.button`
   background: none;
 `;
 const ButtonSettingsWrapper = styled.div`
-  // margin-top: 10vh;
+  margin-bottom: 5vh;
 `;
 const ButtonSettings = styled.button`
   width: 100%;

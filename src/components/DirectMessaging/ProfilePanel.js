@@ -103,14 +103,14 @@ const ProfilePanel = ({ friend, setProfile }) => {
           <GreyText>{friend.location}</GreyText>
           <AboutMeText>{friend.aboutMe}</AboutMeText>
           <Icons>
-            <Link href={require('../assets/socialMedia/facebook.png')}>
-              <Image alt="facebook" src={require('../assets/socialMedia/facebook.png')} />
+            <Link href={require('../../assets/socialMedia/facebook.png')}>
+              <Image alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
             </Link>
-            <Link href={require('../assets/socialMedia/twitter.png')}>
-              <Image alt="facebook" src={require('../assets/socialMedia/twitter.png')} />
+            <Link href={require('../../assets/socialMedia/twitter.png')}>
+              <Image alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
             </Link>
-            <Link href={require('../assets/socialMedia/instagram.png')}>
-              <Image alt="facebook" src={require('../assets/socialMedia/instagram.png')} />
+            <Link href={require('../../assets/socialMedia/instagram.png')}>
+              <Image alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
             </Link>
           </Icons>
         </CenteredContent>

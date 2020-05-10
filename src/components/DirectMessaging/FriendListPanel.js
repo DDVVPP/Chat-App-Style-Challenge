@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import friends from '../data/friends';
+import friends from '../../data/friends';
 import FriendCard from './FriendCard';
 
 const Wrapper = styled.div`
@@ -64,11 +64,11 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
     <Wrapper>
       <SearchBadgeWrapper>
         <SearchWrapper>
-          <Image alt="search" src={require('../assets/icons/search.png')} />
+          <Image alt="search" src={require('../../assets/icons/search.png')} />
           <Input type="text" placeholder="Enter for search..." />
         </SearchWrapper>
         <GreyText>147</GreyText>
-        <Image alt="badge" src={require('../assets/icons/starBadge.png')} />
+        <Image alt="badge" src={require('../../assets/icons/starBadge.png')} />
       </SearchBadgeWrapper>
       <SortWrapper>
         <GreyText>Sort By:</GreyText>

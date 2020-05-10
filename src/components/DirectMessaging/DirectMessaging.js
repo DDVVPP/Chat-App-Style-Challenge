@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import './App.css';
 
-import ChatPanel from './components/ChatPanel';
-import FriendListPanel from './components/FriendListPanel';
-import NavigationPanel from './components/NavigationPanel';
-import ProfilePanel from './components/ProfilePanel';
+import ChatPanel from './ChatPanel';
+import FriendListPanel from './FriendListPanel';
+import NavigationPanel from './NavigationPanel';
+import ProfilePanel from './ProfilePanel';
 
 const Wrapper = styled.div`
   display: flex;

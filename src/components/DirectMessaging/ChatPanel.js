@@ -76,7 +76,7 @@ const ChatPanel = ({ friend }) => {
         </ProfileSummaryWrapper>
         <SearchWrapper>
           <Input type="text" placeholder="Enter for search..." />
-          <Image alt="search" src={require('../assets/icons/search.png')} />
+          <Image alt="search" src={require('../../assets/icons/search.png')} />
         </SearchWrapper>
       </ContentWrapper>
     </Wrapper>

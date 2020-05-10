@@ -14,8 +14,9 @@ const ContentWrapper = styled.div`
 `;
 const Button = styled.button`
   border: none;
-  background: ${({ buttonColor }) => (buttonColor ? '#292f4c' : 'none')};
-  color: ${({ buttonColor }) => (buttonColor ? 'white' : 'none')};
+  // background: ${({ buttonColor }) => (buttonColor ? '#292f4c' : 'none')};
+  // color: ${({ buttonColor }) => (buttonColor ? 'white' : 'none')};
+    background: 'none';
   cursor: pointer;
   border-radius: 1rem;
   transition-duration: 0.4s;
@@ -54,9 +55,11 @@ const ParagraphText = styled.p`
 const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
   const [buttonColor, setButtonColor] = useState(false);
   const ChatAndProfile = () => {
+    console.log('BUTTON COLOR', buttonColor);
     setProfile(true);
     setFriend(selectedFriend);
-    setButtonColor(true);
+
+    setButtonColor(!buttonColor);
   };
   return (
     <Wrapper>
