@@ -24,7 +24,10 @@ const DirectMessaging = () => {
       <FriendListPanel setProfile={setProfile} profile={profile} setFriend={setFriend} />
 
       {profile
-        ? [<ChatPanel friendMessages={friend.messagesReceived} />, <ProfilePanel friend={friend} />]
+        ? [
+            <ChatPanel friend={friend} />,
+            <ProfilePanel friend={friend} setProfile={setProfile} setFriend={setFriend} />,
+          ]
         : null}
     </Wrapper>
   );

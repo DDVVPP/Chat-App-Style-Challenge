@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -14,7 +14,8 @@ const ContentWrapper = styled.div`
 `;
 const Button = styled.button`
   border: none;
-  background: none;
+  background: ${({ buttonColor }) => (buttonColor ? '#292f4c' : 'none')};
+  color: ${({ buttonColor }) => (buttonColor ? 'white' : 'none')};
   cursor: pointer;
   border-radius: 1rem;
   transition-duration: 0.4s;
@@ -51,15 +52,15 @@ const ParagraphText = styled.p`
 `;
 
 const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
+  const [buttonColor, setButtonColor] = useState(false);
   const ChatAndProfile = () => {
-    setProfile(!profile);
+    setProfile(true);
     setFriend(selectedFriend);
-
-    // return <ProfilePanel />;
+    setButtonColor(true);
   };
   return (
     <Wrapper>
-      <Button onClick={ChatAndProfile}>
+      <Button buttonColor={buttonColor} onClick={ChatAndProfile}>
         <ContentWrapper>
           <ProfileSummaryWrapper>
             <ImageUser src={selectedFriend.profilePhoto} alt="profile" />
