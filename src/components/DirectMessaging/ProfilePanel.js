@@ -1,90 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  background-color: white;
-  width: 22vw;
-  border-left: 1px;
-  height: 100vh;
-`;
-const Content = styled.div`
-  margin: 5%;
-  display: flex;
-  flex-direction: column;
-`;
-const CenteredContent = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-const Icons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 10%;
-`;
-const Link = styled.a`
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  // position: absolute;
-`;
-const Image = styled.img`
-  align-self: center;
-  // position: relative;
-  max-width: 70%;
-  height: auto;
-`;
-const ContactWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
+import {
+  Wrapper,
+  Content,
+  CenteredContent,
+  Icons,
+  Link,
+  Image,
+  ContactWrapper,
+  ContactDetailsWrapper,
+  ImageUser,
+  NameText,
+  GreyText,
+  GreyTextLarge,
+  GreyParagraphText,
+  ParagraphText,
+  AboutMeText,
+  Button,
+} from '../styles/ProfilePanelStyles';
 
-const ContactDetailsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-right: 2%;
-`;
-const ImageUser = styled.img`
-  align-self: center;
-  margin-bottom: 15%;
-  width: 80%;
-  height: auto;
-`;
-const NameText = styled.h1`
-  font-size: 18px;
-  text-align: center;
-`;
-const GreyText = styled.p`
-  opacity: 50%;
-  text-align: center;
-`;
-const GreyTextLarge = styled.h1`
-  opacity: 50%;
-  font-size: 20px;
-  text-align: right;
-`;
-const GreyParagraphText = styled.p`
-  opacity: 50%;
-  text-align: right;
-  margin-right: 2%;
-`;
-const ParagraphText = styled.p`
-  text-align: left;
-`;
-const AboutMeText = styled.p`
-  text-align: center;
-`;
-const Button = styled.button`
-  border: none;
-  background: none;
-  cursor: pointer;
-  border-radius: 1rem;
-  transition-duration: 0.4s;
-  &:hover {
-    background-color: #f44a4a;
-    color: white;
-  }
-`;
 const ProfilePanel = ({ friend, setProfile }) => {
   const closeProfile = () => {
     setProfile(false);

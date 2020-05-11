@@ -1,88 +1,53 @@
+/* eslint-disable no-return-assign */
 import React from 'react';
-import styled from 'styled-components';
 
 import home from '../../assets/icons/home.png';
 import inbox from '../../assets/icons/inbox.png';
 import notifications from '../../assets/icons/notifications.png';
 import options from '../../assets/icons/options.png';
-import sendGrey from '../../assets/icons/sendGrey.png';
+import sendWhite from '../../assets/icons/sendWhite.png';
 import settings from '../../assets/icons/settings.png';
 import users from '../../assets/icons/users.png';
 import currentUser from '../../assets/users/MainUser.png';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #292f4c;
-  height: 100vh;
-  width: 7vw;
-`;
-const CenterButtonWrapper = styled.div`
-  margin-bottom: 5vh;
-`;
-const Button = styled.button`
-  width: 100%;
-  border: none;
-  background: none;
-  margin-bottom: 5vh;
-  cursor: pointer;
-`;
-const UserButtonWrapper = styled.div`
-  margin-top: 5vh;
-`;
-const ButtonUser = styled.button`
-  width: 100%;
-  border: none;
-  background: none;
-`;
-const ButtonSettingsWrapper = styled.div`
-  margin-bottom: 5vh;
-`;
-const ButtonSettings = styled.button`
-  width: 100%;
-  border: none;
-  background: none;
-`;
-const Image = styled.img`
-  width: 25%;
-  height: 25%;
-`;
-const ImageUser = styled.img`
-  width: 50%;
-  height: 50%;
-`;
+import {
+  Wrapper,
+  CenterButtonWrapper,
+  Button,
+  UserImageWrapper,
+  ButtonSettingsWrapper,
+  ButtonSettings,
+  Image,
+  ImageUser,
+} from '../styles/NavigationPanelStyles';
 
 const NavigationPanel = () => {
   return (
     <Wrapper>
-      <UserButtonWrapper>
-        <ButtonUser>
-          <ImageUser src={currentUser} alt="current user" />
-        </ButtonUser>
-      </UserButtonWrapper>
+      <UserImageWrapper>
+        <ImageUser src={currentUser} alt="current user" />
+      </UserImageWrapper>
       <CenterButtonWrapper>
-        <Button>
+        <Button onClick={() => (window.location.pathname = '/home')}>
           <Image src={home} alt="home" />
         </Button>
-        <Button>
-          <Image src={sendGrey} alt="sendGrey" />
+        <Button onClick={() => (window.location.pathname = '/send')}>
+          <Image src={sendWhite} alt="send" />
         </Button>
-        <Button>
+        <Button onClick={() => (window.location.pathname = '/inbox')}>
           <Image src={inbox} alt="inbox" />
         </Button>
-        <Button>
+        <Button onClick={() => (window.location.pathname = '/users')}>
           <Image src={users} alt="users" />
         </Button>
-        <Button>
+        <Button onClick={() => (window.location.pathname = '/notifications')}>
           <Image src={notifications} alt="notifications" />
         </Button>
-        <Button>
+        <Button onClick={() => (window.location.pathname = '/options')}>
           <Image src={options} alt="options" />
         </Button>
       </CenterButtonWrapper>
       <ButtonSettingsWrapper>
-        <ButtonSettings>
+        <ButtonSettings onClick={() => (window.location.pathname = '/settings')}>
           <Image src={settings} alt="settings" />
         </ButtonSettings>
       </ButtonSettingsWrapper>

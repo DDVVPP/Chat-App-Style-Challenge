@@ -13,13 +13,13 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/send" component={Send} />
+        <Route path="/home" component={Home} />
+        <Route path="/send" component={Send} />
         <Route exact path="/inbox" component={DirectMessaging} />
-        <Route exact path="/users" component={Users} />
-        <Route exact path="/notifications" component={Notifications} />
-        <Route exact path="/options" component={Options} />
-        <Route exact path="/settings" component={Settings} />
+        <Route path="/users" component={Users} />
+        <Route path="/notifications" component={Notifications} />
+        <Route path="/options" component={Options} />
+        <Route path="/settings" component={Settings} />
       </Switch>
     </BrowserRouter>
   );
