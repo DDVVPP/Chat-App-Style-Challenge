@@ -7,9 +7,14 @@ import {
   NameTimeWrapper,
   ImageUser,
   Image,
+  ImageMic,
+  ImageEmoji,
   NameText,
   GreyText,
   SearchWrapper,
+  StarBadgeWrapper,
+  Button,
+  ButtonPaperclip,
   Input,
 } from '../styles/ChatPanelStyles';
 
@@ -28,8 +33,18 @@ const ChatPanel = ({ friend }) => {
           </NameTimeWrapper>
         </ProfileSummaryWrapper>
         <SearchWrapper>
+          <ButtonPaperclip>
+            <Image alt="search" src={require('../../assets/icons/paperclip.png')} />
+          </ButtonPaperclip>
           <Input type="text" placeholder="Enter for search..." />
-          <Image alt="search" src={require('../../assets/icons/search.png')} />
+          <StarBadgeWrapper>
+            <Button>
+              <ImageEmoji alt="search" src={require('../../assets/icons/emoji.png')} />
+            </Button>
+            <Button>
+              <ImageMic alt="search" src={require('../../assets/icons/mic.png')} />
+            </Button>
+          </StarBadgeWrapper>
         </SearchWrapper>
       </ContentWrapper>
     </Wrapper>

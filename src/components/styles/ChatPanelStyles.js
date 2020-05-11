@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   background-color: white;
   width: 38vw;
   height: 100vh;
-  margin-bottom: 3%;
   border-style: solid;
   border-width: 2px;
   border-color: #eeeeee;
@@ -37,8 +36,22 @@ export const ImageUser = styled.img`
 `;
 export const Image = styled.img`
   align-self: center;
-  // position: relative;
-  max-width: 70%;
+  // padding: 0.5rem;
+  // margin-left: 1rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  max-width: 30%;
+  height: auto;
+`;
+export const ImageMic = styled.img`
+  align-self: center;
+  max-width: 40%;
+  height: auto;
+`;
+export const ImageEmoji = styled.img`
+  align-self: center;
+  max-width: 50%;
   height: auto;
 `;
 export const NameText = styled.h1`
@@ -51,11 +64,33 @@ export const GreyText = styled.p`
 export const SearchWrapper = styled.div`
   display: flex;
   flex-direction: row;
-`;
-export const Input = styled.input`
   border-radius: 50px;
   border: none;
-  padding: 2rem;
-  width: 70%;
-  background-color: #eeeeee;
+  width: 90%;
+  background-color: #e9e9e9;
+`;
+export const StarBadgeWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 30%;
+  height: auto;
+`;
+export const Input = styled.input`
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  // padding: 1rem;
+`;
+export const Button = styled.button`
+  width: 90%;
+  border: none;
+  background: none;
+  cursor: pointer;
+`;
+export const ButtonPaperclip = styled.button`
+  width: 20%;
+  border: none;
+  background: none;
+  cursor: pointer;
 `;

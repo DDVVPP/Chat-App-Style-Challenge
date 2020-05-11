@@ -12,11 +12,11 @@ import {
   ImageUser,
   NameText,
   GreyText,
-  GreyTextLarge,
   GreyParagraphText,
   ParagraphText,
   AboutMeText,
   Button,
+  ButtonWrapper,
 } from '../styles/ProfilePanelStyles';
 
 const ProfilePanel = ({ friend, setProfile }) => {
@@ -26,9 +26,9 @@ const ProfilePanel = ({ friend, setProfile }) => {
   return (
     <Wrapper>
       <Content>
-        <Button onClick={closeProfile}>
-          <GreyTextLarge>X</GreyTextLarge>
-        </Button>
+        <ButtonWrapper>
+          <Button onClick={closeProfile}>X</Button>
+        </ButtonWrapper>
         <CenteredContent>
           <ImageUser alt="profile" src={friend.profilePhoto} />
           <NameText>

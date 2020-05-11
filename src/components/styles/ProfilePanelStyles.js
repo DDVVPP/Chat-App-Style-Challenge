@@ -73,14 +73,19 @@ export const ParagraphText = styled.p`
 export const AboutMeText = styled.p`
   text-align: center;
 `;
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
 export const Button = styled.button`
   border: none;
   background: none;
   cursor: pointer;
-  border-radius: 1rem;
+  padding: 1rem;
+  text-align: right;
+  opacity: 0.5;
   transition-duration: 0.4s;
   &:hover {
-    background-color: #f44a4a;
-    color: white;
+    opacity: 1;
   }
 `;

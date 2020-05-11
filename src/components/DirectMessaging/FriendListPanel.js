@@ -5,12 +5,14 @@ import {
   Wrapper,
   SearchWrapper,
   SearchBadgeWrapper,
+  StarBadgeWrapper,
   SortWrapper,
   Input,
   GreyText,
   NameText,
   Button,
   Image,
+  ImageBadge,
 } from '../styles/FriendListPanelStyles';
 import FriendCard from './FriendCard';
 
@@ -22,17 +24,21 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
           <Image alt="search" src={require('../../assets/icons/search.png')} />
           <Input type="text" placeholder="Enter for search..." />
         </SearchWrapper>
-        <GreyText>147</GreyText>
-        <Image alt="badge" src={require('../../assets/icons/starBadge.png')} />
+        <StarBadgeWrapper>
+          <GreyText>147</GreyText>
+          <ImageBadge alt="badge" src={require('../../assets/icons/starBadge.png')} />
+        </StarBadgeWrapper>
       </SearchBadgeWrapper>
-      <SortWrapper>
-        <GreyText>Sort By:</GreyText>
-        <NameText>Latest First v</NameText>
-        <GreyText>Add New</GreyText>
-        <Button>
-          <NameText>+</NameText>
-        </Button>
-      </SortWrapper>
+      <SearchBadgeWrapper>
+        <SortWrapper>
+          <GreyText>Sort By:</GreyText>
+          <NameText>Latest First</NameText>
+        </SortWrapper>
+        <StarBadgeWrapper>
+          <GreyText>Add New</GreyText>
+          <Button>+</Button>
+        </StarBadgeWrapper>
+      </SearchBadgeWrapper>
       {friends.map((selectedFriend) => {
         return (
           <FriendCard

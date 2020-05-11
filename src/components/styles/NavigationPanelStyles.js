@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   background-color: #292f4c;
   height: 100vh;
-  width: 7vw;
+  width: 6vw;
 `;
 export const CenterButtonWrapper = styled.div`
   margin-bottom: 5vh;
