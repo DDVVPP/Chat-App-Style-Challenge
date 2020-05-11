@@ -1,56 +1,67 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const FriendListContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 32vw;
+  width: 30vw;
   margin: 1vw;
 `;
-export const SearchWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  border-radius: 50px;
-  border: none;
-  width: 80%;
-  background-color: #e9e9e9;
-`;
-export const SearchBadgeWrapper = styled.div`
+export const FlexRowSpaceBtwnContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 2%;
 `;
-export const StarBadgeWrapper = styled.div`
+export const Searchbar = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 50px;
+  border: none;
+  background-color: ${({ theme }) => theme.colors.searchbarGrey1};
+  input {
+    border: none;
+    width: 100%;
+    background-color: ${({ theme }) => theme.colors.transparent};
+    padding: 1rem;
+  }
+  input::placeholder {
+    opacity: 50%;
+  }
+  img {
+    align-self: center;
+    padding: 1rem;
+    margin-left: 2rem;
+    max-width: 5%;
+    height: auto;
+  }
+`;
+export const FlexRowEndContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   width: 30%;
   height: auto;
+  img {
+    align-self: center;
+    margin-left: 5%;
+    max-width: 15%;
+    height: auto;
+  }
 `;
-export const SortWrapper = styled.div`
+export const ParagraphTextGrey = styled.p`
+  opacity: 30%;
+  margin-right: 1rem;
+`;
+export const SortContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 80%;
 `;
-export const Input = styled.input`
-  border: none;
-  width: 100%;
-  background-color: transparent;
-  padding: 1rem;
-`;
-export const GreyText = styled.p`
-  opacity: 0.5;
-  margin-right: 5%;
-`;
-export const NameText = styled.p`
-  text-align: left;
-`;
 export const Button = styled.button`
-  border: none;
-  background: #f34848;
-  cursor: pointer;
-  color: white;
+  background: ${({ theme }) => theme.colors.tomato};
+  color: ${({ theme }) => theme.colors.white};
   height: 3rem;
   width: 3rem;
   text-align: center;
@@ -58,20 +69,10 @@ export const Button = styled.button`
   border-radius: 50px;
   transition-duration: 0.4s;
   &:hover {
-    background-color: #292f4c;
+    background-color: ${({ theme }) => theme.colors.deepBlue};
     color: white;
   }
-`;
-export const Image = styled.img`
-  align-self: center;
-  padding: 1rem;
-  margin-left: 2rem;
-  max-width: 5%;
-  height: auto;
-`;
-export const ImageBadge = styled.img`
-  align-self: center;
-  margin-left: 5%;
-  max-width: 15%;
-  height: auto;
+  h2 {
+    text-align: center;
+  }
 `;

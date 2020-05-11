@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import NavigationPanel from './components/DirectMessaging/NavigationPanel';
 import GlobalStyle from './components/styles/globalStyle';
+import theme from './components/styles/theme.ts';
 import Routes from './routes';
 
 const Wrapper = styled.div`
@@ -11,11 +12,13 @@ const Wrapper = styled.div`
 `;
 function App() {
   return (
-    <Wrapper>
-      <NavigationPanel />
-      <Routes />
-      <GlobalStyle />
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <NavigationPanel />
+        <Routes />
+        <GlobalStyle />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
 

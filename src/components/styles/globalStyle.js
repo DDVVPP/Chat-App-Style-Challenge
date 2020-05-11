@@ -1,19 +1,42 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
-@import url(‘https://fonts.googleapis.com/css?family=Montserrat|Roboto');
-  body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+import theme from './theme.ts';
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+const GlobalStyle = createGlobalStyle`
+
+*
+  h1 {
+    font-family: ${(props) => props.theme.fontFamily[0]};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  font-size: ${theme.fontSizes.heading[2]}px;
+  text-align: left;
+  margin: 0;
+}
+  h2 {
+    font-family: ${(props) => props.theme.fontFamily[0]};
+  font-weight: ${(props) => props.theme.fontWeights.bold};
+  font-size: ${(props) => props.theme.fontSizes.heading[1]}px;
+  text-align: left;
+  margin: 0;
+}
+  h3 {
+    font-family: ${(props) => props.theme.fontFamily[0]};
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  font-size: ${(props) => props.theme.fontSizes.heading[0]}px;
+  text-align: left;
+  margin: 0;
+}
+p {
+  font-family: ${(props) => props.theme.fontFamily[0]};
+  font-weight: ${(props) => props.theme.fontWeights.regular};
+  font-size: ${(props) => props.theme.fontSizes.paragraph[1]}px;
+  text-align: left;
+}
+button {
+  background: 'none';
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
 `;
 

@@ -2,43 +2,41 @@ import React from 'react';
 
 import friends from '../../data/friends';
 import {
-  Wrapper,
-  SearchWrapper,
-  SearchBadgeWrapper,
-  StarBadgeWrapper,
-  SortWrapper,
-  Input,
-  GreyText,
-  NameText,
+  FriendListContainer,
+  Searchbar,
+  FlexRowSpaceBtwnContainer,
+  FlexRowEndContainer,
+  SortContainer,
+  ParagraphTextGrey,
   Button,
-  Image,
-  ImageBadge,
 } from '../styles/FriendListPanelStyles';
 import FriendCard from './FriendCard';
 
 const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, buttonColor }) => {
   return (
-    <Wrapper>
-      <SearchBadgeWrapper>
-        <SearchWrapper>
-          <Image alt="search" src={require('../../assets/icons/search.png')} />
-          <Input type="text" placeholder="Enter for search..." />
-        </SearchWrapper>
-        <StarBadgeWrapper>
-          <GreyText>147</GreyText>
-          <ImageBadge alt="badge" src={require('../../assets/icons/starBadge.png')} />
-        </StarBadgeWrapper>
-      </SearchBadgeWrapper>
-      <SearchBadgeWrapper>
-        <SortWrapper>
-          <GreyText>Sort By:</GreyText>
-          <NameText>Latest First</NameText>
-        </SortWrapper>
-        <StarBadgeWrapper>
-          <GreyText>Add New</GreyText>
-          <Button>+</Button>
-        </StarBadgeWrapper>
-      </SearchBadgeWrapper>
+    <FriendListContainer>
+      <FlexRowSpaceBtwnContainer>
+        <Searchbar>
+          <img alt="search" src={require('../../assets/icons/search.png')} />
+          <input type="text" placeholder="Enter for search..." />
+        </Searchbar>
+        <FlexRowEndContainer>
+          <ParagraphTextGrey>147</ParagraphTextGrey>
+          <img alt="badge" src={require('../../assets/icons/starBadge.png')} />
+        </FlexRowEndContainer>
+      </FlexRowSpaceBtwnContainer>
+      <FlexRowSpaceBtwnContainer>
+        <SortContainer>
+          <ParagraphTextGrey>Sort By:</ParagraphTextGrey>
+          <p>Latest First</p>
+        </SortContainer>
+        <FlexRowEndContainer>
+          <ParagraphTextGrey>Add New</ParagraphTextGrey>
+          <Button>
+            <h2>+</h2>
+          </Button>
+        </FlexRowEndContainer>
+      </FlexRowSpaceBtwnContainer>
       {friends.map((selectedFriend) => {
         return (
           <FriendCard
@@ -52,7 +50,7 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
           />
         );
       })}
-    </Wrapper>
+    </FriendListContainer>
   );
 };
 

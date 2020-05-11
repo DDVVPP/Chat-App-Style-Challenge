@@ -1,22 +1,17 @@
 import React from 'react';
 
 import {
-  Wrapper,
+  ProfilePanelContainer,
   Content,
   CenteredContent,
-  Icons,
-  Link,
+  IconContainer,
   Image,
-  ContactWrapper,
-  ContactDetailsWrapper,
-  ImageUser,
-  NameText,
-  GreyText,
-  GreyParagraphText,
-  ParagraphText,
-  AboutMeText,
+  ContactContainer,
+  ContactDetailsContainer,
+  H3GreyText,
+  ParagraphTextGrey,
   Button,
-  ButtonWrapper,
+  ButtonContainer,
 } from '../styles/ProfilePanelStyles';
 
 const ProfilePanel = ({ friend, setProfile }) => {
@@ -24,44 +19,44 @@ const ProfilePanel = ({ friend, setProfile }) => {
     setProfile(false);
   };
   return (
-    <Wrapper>
+    <ProfilePanelContainer>
       <Content>
-        <ButtonWrapper>
-          <Button onClick={closeProfile}>X</Button>
-        </ButtonWrapper>
+        <ButtonContainer>
+          <Button onClick={closeProfile}>
+            <h2>X</h2>
+          </Button>
+        </ButtonContainer>
         <CenteredContent>
-          <ImageUser alt="profile" src={friend.profilePhoto} />
-          <NameText>
+          <img alt="profile" src={friend.profilePhoto} />
+          <h1>
             {friend.firstName} {friend.lastName}
-          </NameText>
-          <GreyText>{friend.location}</GreyText>
-          <AboutMeText>{friend.aboutMe}</AboutMeText>
-          <Icons>
-            <Link href={require('../../assets/socialMedia/facebook.png')}>
+          </h1>
+          <H3GreyText>{friend.location}</H3GreyText>
+          <p>{friend.aboutMe}</p>
+          <IconContainer>
+            <button type="button">
               <Image alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
-            </Link>
-            <Link href={require('../../assets/socialMedia/twitter.png')}>
+            </button>
+            <button type="button">
               <Image alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
-            </Link>
-            <Link href={require('../../assets/socialMedia/instagram.png')}>
+            </button>
+            <button type="button">
               <Image alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
-            </Link>
-          </Icons>
+            </button>
+          </IconContainer>
         </CenteredContent>
-        <ContactWrapper>
-          <ContactDetailsWrapper>
-            <GreyParagraphText>Phone: </GreyParagraphText>
-            <GreyParagraphText>Email: </GreyParagraphText>
-            <GreyParagraphText>DOB: </GreyParagraphText>
-          </ContactDetailsWrapper>
-          <ContactDetailsWrapper>
-            <ParagraphText>{friend.phone}</ParagraphText>{' '}
-            <ParagraphText>{friend.email} </ParagraphText>{' '}
-            <ParagraphText>{friend.dateOfBirth}</ParagraphText>
-          </ContactDetailsWrapper>
-        </ContactWrapper>
+        <ContactContainer>
+          <ContactDetailsContainer>
+            <ParagraphTextGrey>Phone: </ParagraphTextGrey>
+            <ParagraphTextGrey>Email: </ParagraphTextGrey>
+            <ParagraphTextGrey>DOB: </ParagraphTextGrey>
+          </ContactDetailsContainer>
+          <ContactDetailsContainer>
+            <p>{friend.phone}</p> <p>{friend.email} </p> <p>{friend.dateOfBirth}</p>
+          </ContactDetailsContainer>
+        </ContactContainer>
       </Content>
-    </Wrapper>
+    </ProfilePanelContainer>
   );
 };
 

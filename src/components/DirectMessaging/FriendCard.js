@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
 import {
-  Wrapper,
-  ContentWrapper,
+  FriendCardContainer,
+  ContentContainer,
   Button,
-  ProfileSummaryWrapper,
-  NameTimeWrapper,
+  FlexRowContainer,
   ImageUser,
-  NameText,
-  GreyText,
-  ParagraphText,
+  FlexColumnContainer,
+  ParagraphTextGrey,
+  H3TextGrey,
 } from '../styles/FriendCardStyles';
 
 const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
@@ -21,25 +20,25 @@ const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
     setButtonColor(!buttonColor);
   };
   return (
-    <Wrapper>
-      <Button buttonColor={buttonColor} onClick={ChatAndProfile}>
-        <ContentWrapper>
-          <ProfileSummaryWrapper>
+    <FriendCardContainer>
+      <Button typ="button" buttonColor={buttonColor} onClick={ChatAndProfile}>
+        <ContentContainer>
+          <FlexRowContainer>
             <ImageUser src={selectedFriend.profilePhoto} alt="profile" />
-            <NameTimeWrapper>
-              <NameText>
-                {selectedFriend.firstName} {selectedFriend.lastName}
-                <GreyText>{selectedFriend.status}</GreyText>
-              </NameText>
-              <GreyText>{selectedFriend.timeStamp}</GreyText>
-            </NameTimeWrapper>
-          </ProfileSummaryWrapper>
-          <ParagraphText>
-            {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
-          </ParagraphText>
-        </ContentWrapper>
+            <FlexRowContainer>
+              <FlexColumnContainer>
+                <h2>
+                  {selectedFriend.firstName} {selectedFriend.lastName}
+                </h2>
+                <ParagraphTextGrey>{selectedFriend.status}</ParagraphTextGrey>
+              </FlexColumnContainer>
+              <H3TextGrey>{selectedFriend.timeStamp}</H3TextGrey>
+            </FlexRowContainer>
+          </FlexRowContainer>
+          <p>{selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}</p>
+        </ContentContainer>
       </Button>
-    </Wrapper>
+    </FriendCardContainer>
   );
 };
 
