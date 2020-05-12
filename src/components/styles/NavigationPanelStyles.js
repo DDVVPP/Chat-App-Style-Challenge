@@ -1,20 +1,30 @@
 import styled from 'styled-components';
+import { color } from 'styled-system';
 
-export const Wrapper = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #292f4c;
+  ${color}
   height: 100vh;
   width: 6vw;
 `;
-export const CenterButtonWrapper = styled.div`
+export const UserImageContainer = styled.div`
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 50%;
+    height: auto;
+  }
+`;
+export const CenterButtonContainer = styled.div`
   margin-bottom: 5vh;
 `;
 export const Button = styled.button`
   width: 100%;
   border: none;
-  background: none;
+  ${color}
   margin-bottom: 5vh;
   cursor: pointer;
   opacity: 0.5;
@@ -22,31 +32,26 @@ export const Button = styled.button`
   &:hover {
     opacity: 1;
   }
+  img {
+    width: 28%;
+    height: auto;
+  }
 `;
-export const UserImageWrapper = styled.div`
-  margin-top: 5vh;
-  display: flex;
-  justify-content: center;
-`;
-export const ButtonSettingsWrapper = styled.div`
+export const ButtonSettingsContainer = styled.div`
   margin-bottom: 5vh;
 `;
 export const ButtonSettings = styled.button`
   width: 100%;
   border: none;
-  background: none;
+  ${color}
   cursor: pointer;
   opacity: 0.5;
   transition-duration: 0.4s;
   &:hover {
     opacity: 1;
   }
-`;
-export const Image = styled.img`
-  width: 25%;
-  height: auto;
-`;
-export const ImageUser = styled.img`
-  width: 50%;
-  height: auto;
+  img {
+    width: 28%;
+    height: auto;
+  }
 `;

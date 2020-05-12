@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { color } from 'styled-system';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  background-color: #f1f1f1;
+  ${color}
 `;
 
 export default Wrapper;

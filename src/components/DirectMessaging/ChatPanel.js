@@ -20,7 +20,7 @@ import {
 
 const ChatPanel = ({ friend }) => {
   return (
-    <Wrapper>
+    <Wrapper bg="white" borderColor="lightGrey">
       <ContentWrapper>
         <ProfileSummaryWrapper>
           <ImageUser src={friend.profilePhoto} alt="profile" />
@@ -36,7 +36,7 @@ const ChatPanel = ({ friend }) => {
           <ButtonPaperclip>
             <Image alt="search" src={require('../../assets/icons/paperclip.png')} />
           </ButtonPaperclip>
-          <Input type="text" placeholder="Enter for search..." />
+          <Input bg="transparent" type="text" placeholder="Enter for search..." />
           <StarBadgeWrapper>
             <Button>
               <ImageEmoji alt="search" src={require('../../assets/icons/emoji.png')} />

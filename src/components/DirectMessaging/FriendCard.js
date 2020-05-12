@@ -21,7 +21,13 @@ const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
   };
   return (
     <FriendCardContainer>
-      <Button typ="button" buttonColor={buttonColor} onClick={ChatAndProfile}>
+      <Button
+        color="white"
+        bg="deepBlue"
+        type="button"
+        buttonColor={buttonColor}
+        onClick={ChatAndProfile}
+      >
         <ContentContainer>
           <FlexRowContainer>
             <ImageUser src={selectedFriend.profilePhoto} alt="profile" />

@@ -21,6 +21,15 @@ const colors = {
   deepBlue: '#292f4c',
 };
 
-const theme = { fontFamily, fontWeights, fontSizes, colors };
+const bg = {
+  transparent: 'transparent',
+  black: '#000e1a',
+  white: '#fff',
+  searchbarGrey1: '#e9e9e9',
+  tomato: '#f34848',
+  deepBlue: '#292f4c',
+};
+
+const theme = { fontFamily, fontWeights, fontSizes, colors, bg };
 
 export default theme;

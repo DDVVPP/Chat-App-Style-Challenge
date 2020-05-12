@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { color, border } from 'styled-system';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  ${color}
   align-content: space-between;
-  background-color: white;
   width: 38vw;
   height: 100vh;
   border-style: solid;
   border-width: 2px;
-  border-color: #eeeeee;
+  ${border};
 `;
 export const ContentWrapper = styled.div`
   margin: 3%;
@@ -79,8 +80,7 @@ export const StarBadgeWrapper = styled.div`
 export const Input = styled.input`
   border: none;
   width: 100%;
-  background-color: transparent;
-  // padding: 1rem;
+  ${color}
 `;
 export const Button = styled.button`
   width: 90%;

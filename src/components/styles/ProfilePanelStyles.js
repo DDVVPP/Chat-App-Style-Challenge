@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { color } from 'styled-system';
 
 export const ProfilePanelContainer = styled.div`
-  background-color: white;
+  ${color}
   width: 20vw;
   border-left: 1px;
   height: 100vh;
@@ -35,7 +36,6 @@ export const IconContainer = styled.div`
 `;
 export const Image = styled.img`
   align-self: center;
-  // position: relative;
   max-width: 70%;
   height: auto;
 `;

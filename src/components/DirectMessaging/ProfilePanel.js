@@ -19,7 +19,7 @@ const ProfilePanel = ({ friend, setProfile }) => {
     setProfile(false);
   };
   return (
-    <ProfilePanelContainer>
+    <ProfilePanelContainer bg="white">
       <Content>
         <ButtonContainer>
           <Button onClick={closeProfile}>

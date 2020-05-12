@@ -7,6 +7,8 @@ import {
   FlexRowSpaceBtwnContainer,
   FlexRowEndContainer,
   SortContainer,
+  ParagraphText,
+  ParagraphTextCenter,
   ParagraphTextGrey,
   Button,
 } from '../styles/FriendListPanelStyles';
@@ -16,24 +18,24 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
   return (
     <FriendListContainer>
       <FlexRowSpaceBtwnContainer>
-        <Searchbar>
+        <Searchbar bg="searchbarGrey1">
           <img alt="search" src={require('../../assets/icons/search.png')} />
           <input type="text" placeholder="Enter for search..." />
         </Searchbar>
         <FlexRowEndContainer>
-          <ParagraphTextGrey>147</ParagraphTextGrey>
+          <ParagraphTextGrey fontSize={14}>147</ParagraphTextGrey>
           <img alt="badge" src={require('../../assets/icons/starBadge.png')} />
         </FlexRowEndContainer>
       </FlexRowSpaceBtwnContainer>
       <FlexRowSpaceBtwnContainer>
         <SortContainer>
-          <ParagraphTextGrey>Sort By:</ParagraphTextGrey>
-          <p>Latest First</p>
+          <ParagraphTextGrey fontSize={14}>Sort By:</ParagraphTextGrey>
+          <ParagraphText fontSize={14}>Latest First</ParagraphText>
         </SortContainer>
         <FlexRowEndContainer>
-          <ParagraphTextGrey>Add New</ParagraphTextGrey>
-          <Button>
-            <h2>+</h2>
+          <ParagraphTextGrey fontSize={14}>Add New</ParagraphTextGrey>
+          <Button color="white" bg="tomato">
+            <ParagraphTextCenter fontSize={32}>+</ParagraphTextCenter>
           </Button>
         </FlexRowEndContainer>
       </FlexRowSpaceBtwnContainer>

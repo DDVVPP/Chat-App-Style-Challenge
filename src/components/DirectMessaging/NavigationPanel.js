@@ -10,48 +10,46 @@ import settings from '../../assets/icons/settings.png';
 import users from '../../assets/icons/users.png';
 import currentUser from '../../assets/users/MainUser.png';
 import {
-  Wrapper,
-  CenterButtonWrapper,
+  Container,
+  CenterButtonContainer,
   Button,
-  UserImageWrapper,
-  ButtonSettingsWrapper,
+  UserImageContainer,
+  ButtonSettingsContainer,
   ButtonSettings,
-  Image,
-  ImageUser,
 } from '../styles/NavigationPanelStyles';
 
 const NavigationPanel = () => {
   return (
-    <Wrapper>
-      <UserImageWrapper>
-        <ImageUser src={currentUser} alt="current user" />
-      </UserImageWrapper>
-      <CenterButtonWrapper>
-        <Button onClick={() => (window.location.pathname = '/home')}>
-          <Image src={home} alt="home" />
+    <Container bg="deepBlue">
+      <UserImageContainer>
+        <img src={currentUser} alt="current user" />
+      </UserImageContainer>
+      <CenterButtonContainer>
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/home')}>
+          <img src={home} alt="home" />
         </Button>
-        <Button onClick={() => (window.location.pathname = '/send')}>
-          <Image src={sendWhite} alt="send" />
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/send')}>
+          <img src={sendWhite} alt="send" />
         </Button>
-        <Button onClick={() => (window.location.pathname = '/inbox')}>
-          <Image src={inbox} alt="inbox" />
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/inbox')}>
+          <img src={inbox} alt="inbox" />
         </Button>
-        <Button onClick={() => (window.location.pathname = '/users')}>
-          <Image src={users} alt="users" />
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/users')}>
+          <img src={users} alt="users" />
         </Button>
-        <Button onClick={() => (window.location.pathname = '/notifications')}>
-          <Image src={notifications} alt="notifications" />
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/notifications')}>
+          <img src={notifications} alt="notifications" />
         </Button>
-        <Button onClick={() => (window.location.pathname = '/options')}>
-          <Image src={options} alt="options" />
+        <Button bg="transparent" onClick={() => (window.location.pathname = '/options')}>
+          <img src={options} alt="options" />
         </Button>
-      </CenterButtonWrapper>
-      <ButtonSettingsWrapper>
-        <ButtonSettings onClick={() => (window.location.pathname = '/settings')}>
-          <Image src={settings} alt="settings" />
+      </CenterButtonContainer>
+      <ButtonSettingsContainer>
+        <ButtonSettings bg="transparent" onClick={() => (window.location.pathname = '/settings')}>
+          <img src={settings} alt="settings" />
         </ButtonSettings>
-      </ButtonSettingsWrapper>
-    </Wrapper>
+      </ButtonSettingsContainer>
+    </Container>
   );
 };
 

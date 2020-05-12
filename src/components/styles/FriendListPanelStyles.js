@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { color, typography } from 'styled-system';
 
 export const FriendListContainer = styled.div`
   display: flex;
@@ -19,7 +20,7 @@ export const Searchbar = styled.div`
   width: 80%;
   border-radius: 50px;
   border: none;
-  background-color: ${({ theme }) => theme.colors.searchbarGrey1};
+  ${color}
   input {
     border: none;
     width: 100%;
@@ -50,9 +51,21 @@ export const FlexRowEndContainer = styled.div`
     height: auto;
   }
 `;
+export const ParagraphText = styled.p`
+  text-align: left;
+
+  ${typography}
+`;
+export const ParagraphTextCenter = styled.p`
+  text-align: center;
+  margin-top: -35%;
+  margin-bottom: 0;
+  ${typography}
+`;
 export const ParagraphTextGrey = styled.p`
   opacity: 30%;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  ${typography}
 `;
 export const SortContainer = styled.div`
   display: flex;
@@ -60,19 +73,16 @@ export const SortContainer = styled.div`
   width: 80%;
 `;
 export const Button = styled.button`
-  background: ${({ theme }) => theme.colors.tomato};
-  color: ${({ theme }) => theme.colors.white};
-  height: 3rem;
-  width: 3rem;
-  text-align: center;
-  align-self: center;
-  border-radius: 50px;
+  ${color}
+  margin-top: .3rem;
+  justify-content: center;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   transition-duration: 0.4s;
   &:hover {
     background-color: ${({ theme }) => theme.colors.deepBlue};
     color: white;
-  }
-  h2 {
-    text-align: center;
   }
 `;
