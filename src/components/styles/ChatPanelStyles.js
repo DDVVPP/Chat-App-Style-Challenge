@@ -6,8 +6,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   ${color}
   align-content: space-between;
-  width: 38vw;
-  height: 100vh;
+  // height: 100vh;
   border-style: solid;
   border-width: 2px;
   ${border};

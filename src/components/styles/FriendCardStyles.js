@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import { color, typography } from 'styled-system';
+import { color, typography, space, width } from 'styled-system';
 
 export const FriendCardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 1rem;
-  margin-top: 3%;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: auto;
+  ${space}
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 `;
 export const ContentContainer = styled.div`
-  margin: 3%;
+  ${space}
 `;
 export const Button = styled.button`
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border: none;
   cursor: pointer;
   outline: none;
   &:hover {
@@ -22,7 +25,7 @@ export const Button = styled.button`
 export const FlexRowContainer = styled.div`
   display: flex;
   flext-direction: row;
-  width: 100%;
+  ${width}
   justify-content: space-between;
 `;
 export const FlexColumnContainer = styled.div`
@@ -31,24 +34,12 @@ export const FlexColumnContainer = styled.div`
   justify-content: flex-start;
 `;
 export const ImageUser = styled.img`
-  width: 13%;
-  height: 13%;
-  margin-right: 2%;
+  width: 15%;
+  height: 15%;
+  ${space}
 `;
-export const ParagraphTextGrey = styled.p`
-  opacity: 50%;
-  ${typography}
-  margin-top: 0.5rem;
-`;
-export const ParagraphText = styled.p`
-  ${typography}
-`;
-export const H3TextGrey = styled.h3`
-  ${typography}
+export const Text = styled.p`
   ${color}
-  margin: 0;
-`;
-export const H2Text = styled.h2`
+  ${space}
   ${typography}
-  margin: 0;
 `;

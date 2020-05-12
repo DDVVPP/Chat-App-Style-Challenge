@@ -1,11 +1,6 @@
 const theme = {
   fontFamily: { Lato: 'Lato', SansSerif: 'sans-serif' },
-  fontWeights: {
-    thin: 100,
-    light: 300,
-    regular: 400,
-    bold: 700,
-  },
+  fontWeights: [100, 200, 300, 400, 600, 700],
   fontSizes: [12, 14, 16, 18, 20, 22, 28, 32],
   colors: {
     transparent: 'transparent',
@@ -22,6 +17,7 @@ const theme = {
     left: 'left',
     right: 'right',
   },
+  space: [-4, -2, 0, 2, 4, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 40, 50],
 };
 
 export default theme;

@@ -7,10 +7,7 @@ import {
   FlexRowContainer,
   ImageUser,
   FlexColumnContainer,
-  ParagraphTextGrey,
-  ParagraphText,
-  H3TextGrey,
-  H2Text,
+  Text,
 } from '../styles/FriendCardStyles';
 
 const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
@@ -22,7 +19,7 @@ const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
     setButtonColor(!buttonColor);
   };
   return (
-    <FriendCardContainer>
+    <FriendCardContainer mt={12}>
       <Button
         color="white"
         bg="deepBlue"
@@ -30,26 +27,26 @@ const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
         buttonColor={buttonColor}
         onClick={ChatAndProfile}
       >
-        <ContentContainer>
-          <FlexRowContainer>
-            <ImageUser src={selectedFriend.profilePhoto} alt="profile" />
-            <FlexRowContainer>
+        <ContentContainer m={14}>
+          <FlexRowContainer width={1}>
+            <ImageUser mr={12} mt={0} src={selectedFriend.profilePhoto} alt="profile" />
+            <FlexRowContainer width={1}>
               <FlexColumnContainer>
-                <H2Text fontWeight="bold" fontSize={20}>
+                <Text m={0} fontWeight={700} fontSize={20}>
                   {selectedFriend.firstName} {selectedFriend.lastName}
-                </H2Text>
-                <ParagraphTextGrey fontSize={14} textAlign="left">
+                </Text>
+                <Text mt={10} ml={0} opacity="50%" fontSize={14} textAlign="left">
                   {selectedFriend.status}
-                </ParagraphTextGrey>
+                </Text>
               </FlexColumnContainer>
-              <H3TextGrey opacity="50%" fontWeight="light" fontSize={18}>
+              <Text m={0} opacity="50%" fontWeight={300} fontSize={18}>
                 {selectedFriend.timeStamp}
-              </H3TextGrey>
+              </Text>
             </FlexRowContainer>
           </FlexRowContainer>
-          <ParagraphText fontSize={14} textAlign="left">
+          <Text fontSize={14} textAlign="left">
             {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
-          </ParagraphText>
+          </Text>
         </ContentContainer>
       </Button>
     </FriendCardContainer>

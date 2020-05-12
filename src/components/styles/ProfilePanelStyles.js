@@ -5,7 +5,8 @@ export const ProfilePanelContainer = styled.div`
   ${color}
   width: 20vw;
   border-left: 1px;
-  height: 100vh;
+  flex: 1 0 1;
+  // height: 100vh;
 `;
 export const Content = styled.div`
   margin: 5%;

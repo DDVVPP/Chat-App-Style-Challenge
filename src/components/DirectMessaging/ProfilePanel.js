@@ -31,10 +31,10 @@ const ProfilePanel = ({ friend, setProfile }) => {
         </ButtonContainer>
         <CenteredContent>
           <img alt="profile" src={friend.profilePhoto} />
-          <H1Text fontWeight="bold" fontSize={22} textAlign="center">
+          <H1Text fontWeight={700} fontSize={22} textAlign="center">
             {friend.firstName} {friend.lastName}
           </H1Text>
-          <H3GreyText opacity="50%" fontWeight="light" textAlign="center">
+          <H3GreyText opacity="50%" fontWeight={300} textAlign="center">
             {friend.location}
           </H3GreyText>
           <ParagraphText textAlign="center" fontSize={14}>

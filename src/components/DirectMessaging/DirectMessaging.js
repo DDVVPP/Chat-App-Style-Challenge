@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Wrapper from '../styles/DirectMessagingStyles';
+import { Container } from '../styles/globalStyle';
 import ChatPanel from './ChatPanel';
 import FriendListPanel from './FriendListPanel';
 import ProfilePanel from './ProfilePanel';
@@ -10,7 +10,7 @@ const DirectMessaging = () => {
   const [friend, setFriend] = useState({});
 
   return (
-    <Wrapper fontFamily="Lato" bg="backgroundGrey">
+    <Container fontFamily="Lato" bg="backgroundGrey" width={1}>
       <FriendListPanel setProfile={setProfile} profile={profile} setFriend={setFriend} />
       {profile
         ? [
@@ -18,7 +18,7 @@ const DirectMessaging = () => {
             <ProfilePanel friend={friend} setProfile={setProfile} setFriend={setFriend} />,
           ]
         : null}
-    </Wrapper>
+    </Container>
   );
 };
 

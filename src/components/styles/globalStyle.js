@@ -1,43 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import { color, space, typography, width } from 'styled-system';
 
-import theme from './theme';
-
-const GlobalStyle = createGlobalStyle`
-
-*
-  h1 {
-    font-family: ${(props) => props.theme.fontFamily[0]};
-  font-weight: ${(props) => props.theme.fontWeights.bold};
-  font-size: ${theme.fontSizes.heading[2]}px;
-  text-align: left;
-  margin: 0;
-}
-  h2 {
-    font-family: ${(props) => props.theme.fontFamily[0]};
-  font-weight: ${(props) => props.theme.fontWeights.bold};
-  font-size: ${(props) => props.theme.fontSizes.heading[1]}px;
-  text-align: left;
-  margin: 0;
-}
-  h3 {
-    font-family: ${(props) => props.theme.fontFamily[0]};
-  font-weight: ${(props) => props.theme.fontWeights.light};
-  font-size: ${(props) => props.theme.fontSizes.heading[0]}px;
-  text-align: left;
-  margin: 0;
-}
-p {
-  font-family: ${(props) => props.theme.fontFamily[0]};
-  font-weight: ${(props) => props.theme.fontWeights.regular};
-  font-size: ${(props) => props.theme.fontSizes.paragraph[1]}px;
-  text-align: left;
-}
-button {
-  background: 'none';
-  border: none;
-  cursor: pointer;
-  transition-duration: 0.4s;
-}
+export const Container = styled.div`
+  ${color}
+  ${typography}
+  ${width}
+display: flex;
+  height: auto;
 `;
 
-export default GlobalStyle;
+export const Text = styled.p`
+  ${color}
+  ${space}
+  ${typography}
+`;

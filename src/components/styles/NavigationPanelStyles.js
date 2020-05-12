@@ -1,57 +1,40 @@
 import styled from 'styled-components';
-import { color } from 'styled-system';
+import { color, space, width, flexbox } from 'styled-system';
 
-export const Container = styled.div`
+export const NavigationContainer = styled.div`
+  ${color}
+  ${width}
+  display: flex;
+  ${flexbox}
+`;
+export const InnerContainer = styled.div`
+  ${color}
+  ${width}
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  ${color}
-  height: 100vh;
-  width: 6vw;
+  height: 70%;
 `;
 export const UserImageContainer = styled.div`
-  margin-top: 5vh;
+  ${space}
   display: flex;
-  justify-content: center;
-  img {
-    width: 50%;
-    height: auto;
-  }
+  ${flexbox}
 `;
-export const CenterButtonContainer = styled.div`
-  margin-bottom: 5vh;
+export const UserImage = styled.img`
+  width: 50%;
+  height: auto;
 `;
 export const Button = styled.button`
-  width: 100%;
-  border: none;
   ${color}
-  margin-bottom: 5vh;
+  ${space}
+  border: none;
   cursor: pointer;
-  opacity: 0.5;
   transition-duration: 0.4s;
   &:hover {
     opacity: 1;
   }
   img {
-    width: 28%;
-    height: auto;
-  }
-`;
-export const ButtonSettingsContainer = styled.div`
-  margin-bottom: 5vh;
-`;
-export const ButtonSettings = styled.button`
-  width: 100%;
-  border: none;
-  ${color}
-  cursor: pointer;
-  opacity: 0.5;
-  transition-duration: 0.4s;
-  &:hover {
-    opacity: 1;
-  }
-  img {
-    width: 28%;
+    width: 30%;
     height: auto;
   }
 `;
