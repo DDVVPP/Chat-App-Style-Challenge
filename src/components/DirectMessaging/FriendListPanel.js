@@ -4,6 +4,7 @@ import friends from '../../data/friends';
 import {
   FriendListContainer,
   Searchbar,
+  Input,
   FlexRowSpaceBtwnContainer,
   FlexRowEndContainer,
   SortContainer,
@@ -20,7 +21,7 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
       <FlexRowSpaceBtwnContainer>
         <Searchbar bg="searchbarGrey1">
           <img alt="search" src={require('../../assets/icons/search.png')} />
-          <input type="text" placeholder="Enter for search..." />
+          <Input bg="transparent" type="text" placeholder="Enter for search..." />
         </Searchbar>
         <FlexRowEndContainer>
           <ParagraphTextGrey fontSize={14}>147</ParagraphTextGrey>

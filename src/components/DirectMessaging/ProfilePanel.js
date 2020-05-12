@@ -5,11 +5,14 @@ import {
   Content,
   CenteredContent,
   IconContainer,
+  Icon,
   Image,
   ContactContainer,
   ContactDetailsContainer,
+  H1Text,
   H3GreyText,
   ParagraphTextGrey,
+  ParagraphText,
   Button,
   ButtonContainer,
 } from '../styles/ProfilePanelStyles';
@@ -22,37 +25,55 @@ const ProfilePanel = ({ friend, setProfile }) => {
     <ProfilePanelContainer bg="white">
       <Content>
         <ButtonContainer>
-          <Button onClick={closeProfile}>
-            <h2>X</h2>
+          <Button opacity="30%" onClick={closeProfile}>
+            <H1Text textAlign="right">X</H1Text>
           </Button>
         </ButtonContainer>
         <CenteredContent>
           <img alt="profile" src={friend.profilePhoto} />
-          <h1>
+          <H1Text fontWeight="bold" fontSize={22} textAlign="center">
             {friend.firstName} {friend.lastName}
-          </h1>
-          <H3GreyText>{friend.location}</H3GreyText>
-          <p>{friend.aboutMe}</p>
+          </H1Text>
+          <H3GreyText opacity="50%" fontWeight="light" textAlign="center">
+            {friend.location}
+          </H3GreyText>
+          <ParagraphText textAlign="center" fontSize={14}>
+            {friend.aboutMe}
+          </ParagraphText>
           <IconContainer>
-            <button type="button">
+            <Icon>
               <Image alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
-            </button>
-            <button type="button">
+            </Icon>
+            <Icon>
               <Image alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
-            </button>
-            <button type="button">
+            </Icon>
+            <Icon>
               <Image alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
-            </button>
+            </Icon>
           </IconContainer>
         </CenteredContent>
         <ContactContainer>
           <ContactDetailsContainer>
-            <ParagraphTextGrey>Phone: </ParagraphTextGrey>
-            <ParagraphTextGrey>Email: </ParagraphTextGrey>
-            <ParagraphTextGrey>DOB: </ParagraphTextGrey>
+            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+              Phone:
+            </ParagraphTextGrey>
+            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+              Email:
+            </ParagraphTextGrey>
+            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+              DOB:
+            </ParagraphTextGrey>
           </ContactDetailsContainer>
           <ContactDetailsContainer>
-            <p>{friend.phone}</p> <p>{friend.email} </p> <p>{friend.dateOfBirth}</p>
+            <ParagraphText textAlign="left" fontSize={14}>
+              {friend.phone}
+            </ParagraphText>
+            <ParagraphText textAlign="left" fontSize={14}>
+              {friend.email}
+            </ParagraphText>
+            <ParagraphText textAlign="left" fontSize={14}>
+              {friend.dateOfBirth}
+            </ParagraphText>
           </ContactDetailsContainer>
         </ContactContainer>
       </Content>

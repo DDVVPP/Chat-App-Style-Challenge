@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from 'styled-system';
+import { color, typography } from 'styled-system';
 
 export const ProfilePanelContainer = styled.div`
   ${color}
@@ -18,14 +18,8 @@ export const CenteredContent = styled.div`
   img {
     align-self: center;
     margin-bottom: 15%;
-    width: 80%;
+    width: 60%;
     height: auto;
-  }
-  h1 {
-    text-align: center;
-  }
-  p {
-    text-align: center;
   }
 `;
 export const IconContainer = styled.div`
@@ -34,9 +28,18 @@ export const IconContainer = styled.div`
   justify-content: center;
   margin: 10%;
 `;
+export const Icon = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  &:hover {
+    opacity: 50%;
+  }
+`;
 export const Image = styled.img`
   align-self: center;
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
 `;
 export const ContactContainer = styled.div`
@@ -47,26 +50,35 @@ export const ContactContainer = styled.div`
 export const ContactDetailsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 2%;
+`;
+export const H1Text = styled.h1`
+  ${color}
+  ${typography}
 `;
 export const H3GreyText = styled.h3`
-  opacity: 50%;
-  text-align: center;
+  ${color}
+  ${typography}
+  margin:0;
+`;
+export const ParagraphText = styled.p`
+  ${typography}
 `;
 export const ParagraphTextGrey = styled.p`
-  opacity: 50%;
-  text-align: right;
-  margin-right: 2%;
+  ${color}
+  ${typography}
+margin-right: .5rem;
 `;
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
 export const Button = styled.button`
-  padding: 1rem;
+  background: none;
+  border: none;
   text-align: right;
-  opacity: 30%;
-  &:hover {
+  cursor: pointer;
+  ${color}
+  &: hover {
     opacity: 100%;
   }
 `;

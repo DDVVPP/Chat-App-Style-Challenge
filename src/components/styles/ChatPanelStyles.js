@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, border } from 'styled-system';
+import { color, border, typography } from 'styled-system';
 
 export const Wrapper = styled.div`
   display: flex;

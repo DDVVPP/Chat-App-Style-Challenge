@@ -21,21 +21,23 @@ export const Searchbar = styled.div`
   border-radius: 50px;
   border: none;
   ${color}
-  input {
-    border: none;
-    width: 100%;
-    background-color: ${({ theme }) => theme.colors.transparent};
-    padding: 1rem;
-  }
-  input::placeholder {
-    opacity: 50%;
-  }
   img {
     align-self: center;
-    padding: 1rem;
-    margin-left: 2rem;
+    padding: 0.5rem;
+    margin-left: 1rem;
     max-width: 5%;
     height: auto;
+  }
+`;
+
+export const Input = styled.input`
+  border: none;
+  width: 100%;
+  ${color}
+  padding: .5rem;
+  outline: none;
+  &::placeholder {
+    opacity: 50%;
   }
 `;
 export const FlexRowEndContainer = styled.div`
@@ -53,7 +55,6 @@ export const FlexRowEndContainer = styled.div`
 `;
 export const ParagraphText = styled.p`
   text-align: left;
-
   ${typography}
 `;
 export const ParagraphTextCenter = styled.p`
@@ -81,6 +82,7 @@ export const Button = styled.button`
   height: 35px;
   border-radius: 50%;
   transition-duration: 0.4s;
+  outline: none;
   &:hover {
     background-color: ${({ theme }) => theme.colors.deepBlue};
     color: white;

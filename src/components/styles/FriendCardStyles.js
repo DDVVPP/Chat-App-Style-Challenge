@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from 'styled-system';
+import { color, typography } from 'styled-system';
 
 export const FriendCardContainer = styled.div`
   display: flex;
@@ -13,6 +13,8 @@ export const ContentContainer = styled.div`
 `;
 export const Button = styled.button`
   border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
   &:hover {
     ${color}
   }
@@ -29,13 +31,24 @@ export const FlexColumnContainer = styled.div`
   justify-content: flex-start;
 `;
 export const ImageUser = styled.img`
-  width: 10%;
-  height: 10%;
+  width: 13%;
+  height: 13%;
   margin-right: 2%;
 `;
 export const ParagraphTextGrey = styled.p`
   opacity: 50%;
+  ${typography}
+  margin-top: 0.5rem;
+`;
+export const ParagraphText = styled.p`
+  ${typography}
 `;
 export const H3TextGrey = styled.h3`
-  opacity: 50%;
+  ${typography}
+  ${color}
+  margin: 0;
+`;
+export const H2Text = styled.h2`
+  ${typography}
+  margin: 0;
 `;

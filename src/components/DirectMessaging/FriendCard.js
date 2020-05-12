@@ -8,7 +8,9 @@ import {
   ImageUser,
   FlexColumnContainer,
   ParagraphTextGrey,
+  ParagraphText,
   H3TextGrey,
+  H2Text,
 } from '../styles/FriendCardStyles';
 
 const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
@@ -33,15 +35,21 @@ const FriendCard = ({ selectedFriend, setProfile, profile, setFriend }) => {
             <ImageUser src={selectedFriend.profilePhoto} alt="profile" />
             <FlexRowContainer>
               <FlexColumnContainer>
-                <h2>
+                <H2Text fontWeight="bold" fontSize={20}>
                   {selectedFriend.firstName} {selectedFriend.lastName}
-                </h2>
-                <ParagraphTextGrey>{selectedFriend.status}</ParagraphTextGrey>
+                </H2Text>
+                <ParagraphTextGrey fontSize={14} textAlign="left">
+                  {selectedFriend.status}
+                </ParagraphTextGrey>
               </FlexColumnContainer>
-              <H3TextGrey>{selectedFriend.timeStamp}</H3TextGrey>
+              <H3TextGrey opacity="50%" fontWeight="light" fontSize={18}>
+                {selectedFriend.timeStamp}
+              </H3TextGrey>
             </FlexRowContainer>
           </FlexRowContainer>
-          <p>{selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}</p>
+          <ParagraphText fontSize={14} textAlign="left">
+            {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
+          </ParagraphText>
         </ContentContainer>
       </Button>
     </FriendCardContainer>

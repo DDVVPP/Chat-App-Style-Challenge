@@ -10,7 +10,7 @@ const DirectMessaging = () => {
   const [friend, setFriend] = useState({});
 
   return (
-    <Wrapper bg="backgroundGrey">
+    <Wrapper fontFamily="Lato" bg="backgroundGrey">
       <FriendListPanel setProfile={setProfile} profile={profile} setFriend={setFriend} />
       {profile
         ? [
