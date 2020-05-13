@@ -9,7 +9,7 @@ import {
   Button,
   Input,
 } from '../styles/ChatPanelStyles';
-import { Text } from '../styles/globalStyle';
+import { Text, MediumAvatar, StyledBadgeOffline, StyledBadgeOnline } from '../styles/globalStyle';
 
 const ChatPanel = ({ friend }) => {
   return (
@@ -23,7 +23,30 @@ const ChatPanel = ({ friend }) => {
     >
       <ContentContainer flexDirection="column" justifyContent="space-between" m={16}>
         <FlexContainer width={1}>
-          <ImageUser mr={14} mt={0} src={friend.profilePhoto} alt="profile" />
+          {friend.status === 'Online' ? (
+            <StyledBadgeOnline
+              overlap="circle"
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              variant="dot"
+            >
+              <MediumAvatar alt="current user" src={friend.profilePhoto} />
+            </StyledBadgeOnline>
+          ) : (
+            <StyledBadgeOffline
+              overlap="circle"
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              variant="dot"
+            >
+              <MediumAvatar alt="current user" src={friend.profilePhoto} />
+            </StyledBadgeOffline>
+          )}
+          {/* <ImageUser mr={14} mt={0} src={friend.profilePhoto} alt="profile" /> */}
           <FlexContainer justifyContent="space-between" width={1}>
             <FlexContainer flexDirection="column" justifyContent="flex-start">
               <Text fontWeight={700} m={0} fontSize={18}>

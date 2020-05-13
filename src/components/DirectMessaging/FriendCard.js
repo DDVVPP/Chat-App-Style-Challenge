@@ -7,7 +7,7 @@ import {
   FlexContainer,
   ImageUser,
 } from '../styles/FriendCardStyles';
-import { Text } from '../styles/globalStyle';
+import { Text, MediumAvatar, StyledBadgeOffline, StyledBadgeOnline } from '../styles/globalStyle';
 
 const FriendCard = ({ selectedFriend, setProfile, setFriend }) => {
   const [buttonColor, setButtonColor] = useState(false);
@@ -30,7 +30,33 @@ const FriendCard = ({ selectedFriend, setProfile, setFriend }) => {
       >
         <ContentContainer m={14}>
           <FlexContainer justifyContent="space-between" width={1}>
-            <ImageUser mr={12} mt={0} src={selectedFriend.profilePhoto} alt="profile" />
+            {selectedFriend.status === 'Online' ? (
+              <StyledBadgeOnline
+                overlap="circle"
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                variant="dot"
+              >
+                <MediumAvatar alt="current user" src={selectedFriend.profilePhoto} />
+              </StyledBadgeOnline>
+            ) : (
+              <StyledBadgeOffline
+                overlap="circle"
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                variant="dot"
+              >
+                <MediumAvatar alt="current user" src={selectedFriend.profilePhoto} />
+              </StyledBadgeOffline>
+            )}
+
+            {/* <UserImage src={currentUser} alt="current user" /> */}
+
+            {/* <ImageUser mr={12} mt={0} src={selectedFriend.profilePhoto} alt="profile" /> */}
             <FlexContainer justifyContent="space-between" width={1}>
               <FlexContainer flexDirection="column" justifyContent="flex-start">
                 <Text fontWeight={700} m={0} fontSize={20}>

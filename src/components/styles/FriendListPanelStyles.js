@@ -1,16 +1,16 @@
 import styled from 'styled-components';
-import { color, typography, space, width, flexbox } from 'styled-system';
+import { color, space, width, flexbox, border, borderRadius } from 'styled-system';
 
 export const FlexContainer = styled.div`
   display: flex;
   ${flexbox}
   ${space}
+  ${width}
 `;
 export const Searchbar = styled.div`
   display: flex;
   ${width}
-  border-radius: 50px;
-  border: none;
+  ${borderRadius}
   ${color}
   img {
     align-self: center;
@@ -21,7 +21,7 @@ export const Searchbar = styled.div`
   }
 `;
 export const Input = styled.input`
-  border: none;
+  ${border}
   ${width}
   ${color}
   outline: none;
@@ -31,8 +31,8 @@ export const Input = styled.input`
 `;
 export const Image = styled.img`
   align-self: center;
-  margin-left: 5%;
-  max-width: 18%;
+  ${space}
+  max-width: 20%;
   height: auto;
 `;
 export const Button = styled.button`
@@ -41,11 +41,10 @@ export const Button = styled.button`
   cursor: pointer;
   width: 100%;
   height: 50%;
-  border-radius: 50%;
+  ${borderRadius}
   transition-duration: 0.4s;
   outline: none;
   &:hover {
-    background-color: ${({ theme }) => theme.colors.deepBlue};
-    color: white;
+    ${color}
   }
 `;

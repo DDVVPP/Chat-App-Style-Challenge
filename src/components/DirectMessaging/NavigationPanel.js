@@ -14,8 +14,8 @@ import {
   InnerContainer,
   Button,
   UserImageContainer,
-  UserImage,
 } from '../styles/NavigationPanelStyles';
+import { MediumAvatar, StyledBadgeNavOnline } from '../styles/globalStyle';
 
 const NavigationPanel = () => {
   return (
@@ -25,9 +25,18 @@ const NavigationPanel = () => {
       bg="deepBlue"
       width={0.05}
     >
-      <InnerContainer mb={0}>
+      <InnerContainer mb={0} width={1}>
         <UserImageContainer justifyContent="center" mt={16} mb={-32}>
-          <UserImage src={currentUser} alt="current user" />
+          <StyledBadgeNavOnline
+            overlap="circle"
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            variant="dot"
+          >
+            <MediumAvatar alt="current user" src={currentUser} />
+          </StyledBadgeNavOnline>
         </UserImageContainer>
         <InnerContainer>
           <Button

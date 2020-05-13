@@ -7,7 +7,7 @@ const friends = [
     profilePhoto: require('../assets/users/Donald.png'),
     location: 'Texas, USA',
     aboutMe:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas sed. ',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit id volutpat lacus laoreet non..',
     phone: '+(1) 4435544564',
     email: 'donald@email.com',
     dateOfBirth: 'November 2, 1990',
@@ -21,8 +21,7 @@ const friends = [
     status: 'Offline',
     profilePhoto: require('../assets/users/Anna.png'),
     location: 'Berlin, Germany',
-    aboutMe:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Netus et malesuada fames ac turpis egestas sed. ',
+    aboutMe: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     phone: '+(44) 07911 123456',
     email: 'anna@email.com',
     dateOfBirth: 'March 25, 1992',
@@ -34,7 +33,7 @@ const friends = [
     firstName: 'Tobias',
     lastName: 'Williams',
     status: 'Offline',
-    profilePhoto: require('../assets/users/TobiasGrey.png'),
+    profilePhoto: require('../assets/users/Tobias.png'),
     location: 'Paris, France',
     aboutMe: 'Help people to build websites and apps + grow awareness in social media.',
     phone: '+(33 1) 45 55 01 10',
@@ -53,8 +52,7 @@ const friends = [
     profilePhoto: require('../assets/users/Jennifer.png'),
     status: 'Online',
     location: 'London, UK',
-    aboutMe:
-      'Neque viverra justo nec ultrices dui sapien eget mi. Morbi tempus iaculis urna id volutpat lacus laoreet non.',
+    aboutMe: 'Neque viverra justo nec ultrices dui sapien eget mi. Morbi tempus iaculis urna.',
     phone: '+(44) 7911 432456',
     email: 'jennifer@email.com',
     dateOfBirth: 'July 18, 1993',

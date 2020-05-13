@@ -20,10 +20,11 @@ export const UserImageContainer = styled.div`
   display: flex;
   ${flexbox}
 `;
-export const UserImage = styled.img`
-  width: 50%;
-  height: auto;
-`;
+// export const UserImage = styled.img`
+//   width: 50%;
+//   height: auto;
+// `;
+
 export const Button = styled.button`
   ${color}
   ${space}
@@ -34,7 +35,7 @@ export const Button = styled.button`
     opacity: 1;
   }
   img {
-    width: 30%;
+    width: 40%;
     height: auto;
   }
 `;

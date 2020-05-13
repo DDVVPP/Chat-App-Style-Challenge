@@ -4,11 +4,12 @@ import {
   ProfilePanelContainer,
   FlexContainer,
   IconButton,
-  ImageProfile,
+  StyledBadgeProfileOffline,
+  StyledBadgeProfileOnline,
   ImageIcon,
   Button,
 } from '../styles/ProfilePanelStyles';
-import { Text } from '../styles/globalStyle';
+import { Text, LargeAvatar } from '../styles/globalStyle';
 
 const ProfilePanel = ({ friend, setProfile }) => {
   const closeProfile = () => {
@@ -25,7 +26,33 @@ const ProfilePanel = ({ friend, setProfile }) => {
           </Button>
         </FlexContainer>
         <FlexContainer flexDirection="column">
-          <ImageProfile alt="profile" src={friend.profilePhoto} />
+          <FlexContainer flexDirection="column" justifyContent="center" mx={-10} mb={15}>
+            {friend.status === 'Online' ? (
+              <>
+                <StyledBadgeProfileOnline
+                  overlap="circle"
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
+                  variant="dot"
+                />
+                <LargeAvatar alt="current user" src={friend.profilePhoto} />
+              </>
+            ) : (
+              <>
+                <StyledBadgeProfileOffline
+                  overlap="circle"
+                  anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                  }}
+                  variant="dot"
+                />
+                <LargeAvatar alt="current user" src={friend.profilePhoto} />
+              </>
+            )}
+          </FlexContainer>
           <Text fontWeight={700} fontSize={22} textAlign="center" m={0}>
             {friend.firstName} {friend.lastName}
           </Text>
