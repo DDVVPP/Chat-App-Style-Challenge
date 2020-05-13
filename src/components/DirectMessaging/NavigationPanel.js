@@ -23,7 +23,7 @@ const NavigationPanel = () => {
       flexDirection="column"
       justifyContent="space-between"
       bg="deepBlue"
-      width={0.08}
+      width={0.05}
     >
       <InnerContainer mb={0}>
         <UserImageContainer justifyContent="center" mt={16} mb={-32}>

@@ -1,53 +1,59 @@
 import React from 'react';
 
 import {
-  Wrapper,
-  ContentWrapper,
-  ProfileSummaryWrapper,
-  NameTimeWrapper,
+  ContentContainer,
+  FlexContainer,
   ImageUser,
   Image,
-  ImageMic,
-  ImageEmoji,
-  NameText,
-  GreyText,
-  SearchWrapper,
-  StarBadgeWrapper,
+  ImageEmojiMic,
   Button,
-  ButtonPaperclip,
   Input,
 } from '../styles/ChatPanelStyles';
+import { Text } from '../styles/globalStyle';
 
 const ChatPanel = ({ friend }) => {
   return (
-    <Wrapper bg="white" borderColor="lightGrey">
-      <ContentWrapper>
-        <ProfileSummaryWrapper>
-          <ImageUser src={friend.profilePhoto} alt="profile" />
-          <NameTimeWrapper>
-            <NameText>
-              {friend.firstName} {friend.lastName}
-              <GreyText>{friend.status} placeholder</GreyText>
-            </NameText>
-            <GreyText>{friend.timeStamp}</GreyText>
-          </NameTimeWrapper>
-        </ProfileSummaryWrapper>
-        <SearchWrapper>
-          <ButtonPaperclip>
+    <FlexContainer
+      flexDirection="column"
+      width={0.5}
+      borderRightStyle="solid"
+      borderColor="lightGrey"
+      borderWidth={0.5}
+      bg="white"
+    >
+      <ContentContainer flexDirection="column" justifyContent="space-between" m={16}>
+        <FlexContainer width={1}>
+          <ImageUser mr={14} mt={0} src={friend.profilePhoto} alt="profile" />
+          <FlexContainer justifyContent="space-between" width={1}>
+            <FlexContainer flexDirection="column" justifyContent="flex-start">
+              <Text fontWeight={700} m={0} fontSize={18}>
+                {friend.firstName} {friend.lastName}
+              </Text>
+              <Text mt={8} ml={0} opacity="50%" fontSize={14} textAlign="left">
+                {friend.status} {friend.timeStamp}
+              </Text>
+            </FlexContainer>
+            <Text mt={0} opacity="50%" fontWeight={300} fontSize={16}>
+              Placeholder
+            </Text>
+          </FlexContainer>
+        </FlexContainer>
+        <FlexContainer p={8} bg="searchbarGrey2" border="none" borderRadius={50}>
+          <Button>
             <Image alt="search" src={require('../../assets/icons/paperclip.png')} />
-          </ButtonPaperclip>
-          <Input bg="transparent" type="text" placeholder="Enter for search..." />
-          <StarBadgeWrapper>
+          </Button>
+          <Input width={1} bg="transparent" type="text" placeholder="Enter for search..." />
+          <FlexContainer justifyContent="flex-end" width={0.3}>
             <Button>
-              <ImageEmoji alt="search" src={require('../../assets/icons/emoji.png')} />
+              <ImageEmojiMic alt="search" src={require('../../assets/icons/emoji.png')} />
             </Button>
             <Button>
-              <ImageMic alt="search" src={require('../../assets/icons/mic.png')} />
+              <ImageEmojiMic alt="search" src={require('../../assets/icons/mic.png')} />
             </Button>
-          </StarBadgeWrapper>
-        </SearchWrapper>
-      </ContentWrapper>
-    </Wrapper>
+          </FlexContainer>
+        </FlexContainer>
+      </ContentContainer>
+    </FlexContainer>
   );
 };
 

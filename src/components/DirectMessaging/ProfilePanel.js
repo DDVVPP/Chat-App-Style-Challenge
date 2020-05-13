@@ -2,81 +2,76 @@ import React from 'react';
 
 import {
   ProfilePanelContainer,
-  Content,
-  CenteredContent,
-  IconContainer,
-  Icon,
-  Image,
-  ContactContainer,
-  ContactDetailsContainer,
-  H1Text,
-  H3GreyText,
-  ParagraphTextGrey,
-  ParagraphText,
+  FlexContainer,
+  IconButton,
+  ImageProfile,
+  ImageIcon,
   Button,
-  ButtonContainer,
 } from '../styles/ProfilePanelStyles';
+import { Text } from '../styles/globalStyle';
 
 const ProfilePanel = ({ friend, setProfile }) => {
   const closeProfile = () => {
     setProfile(false);
   };
   return (
-    <ProfilePanelContainer bg="white">
-      <Content>
-        <ButtonContainer>
+    <ProfilePanelContainer width={0.2} bg="white">
+      <FlexContainer flexDirection="column" m={8}>
+        <FlexContainer justifyContent="flex-end" m={10}>
           <Button opacity="30%" onClick={closeProfile}>
-            <H1Text textAlign="right">X</H1Text>
+            <Text textAlign="right" fontSize={20} m={0}>
+              X
+            </Text>
           </Button>
-        </ButtonContainer>
-        <CenteredContent>
-          <img alt="profile" src={friend.profilePhoto} />
-          <H1Text fontWeight={700} fontSize={22} textAlign="center">
+        </FlexContainer>
+        <FlexContainer flexDirection="column">
+          <ImageProfile alt="profile" src={friend.profilePhoto} />
+          <Text fontWeight={700} fontSize={22} textAlign="center" m={0}>
             {friend.firstName} {friend.lastName}
-          </H1Text>
-          <H3GreyText opacity="50%" fontWeight={300} textAlign="center">
+          </Text>
+          <Text opacity="40%" fontWeight={400} fontSize={18} textAlign="center">
             {friend.location}
-          </H3GreyText>
-          <ParagraphText textAlign="center" fontSize={14}>
+          </Text>
+          <Text textAlign="center" fontSize={14} my={0} mx={2}>
             {friend.aboutMe}
-          </ParagraphText>
-          <IconContainer>
-            <Icon>
-              <Image alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
-            </Icon>
-            <Icon>
-              <Image alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
-            </Icon>
-            <Icon>
-              <Image alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
-            </Icon>
-          </IconContainer>
-        </CenteredContent>
-        <ContactContainer>
-          <ContactDetailsContainer>
-            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+          </Text>
+          <FlexContainer justifyContent="center" m={16}>
+            <IconButton>
+              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
+            </IconButton>
+            <IconButton>
+              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
+            </IconButton>
+            <IconButton>
+              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
+            </IconButton>
+          </FlexContainer>
+        </FlexContainer>
+        <FlexContainer>
+          <FlexContainer mr={6} flexDirection="column">
+            <Text textAlign="right" fontSize={14} fontWeight={600} opacity="30%">
               Phone:
-            </ParagraphTextGrey>
-            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+            </Text>
+            <Text textAlign="right" fontSize={14} fontWeight={600} opacity="30%">
               Email:
-            </ParagraphTextGrey>
-            <ParagraphTextGrey textAlign="right" fontSize={14} opacity="50%">
+            </Text>
+            <Text textAlign="right" fontSize={14} fontWeight={600} opacity="30%">
               DOB:
-            </ParagraphTextGrey>
-          </ContactDetailsContainer>
-          <ContactDetailsContainer>
-            <ParagraphText textAlign="left" fontSize={14}>
+            </Text>
+          </FlexContainer>
+          <FlexContainer flexDirection="column">
+            <Text textAlign="left" fontSize={14}>
               {friend.phone}
-            </ParagraphText>
-            <ParagraphText textAlign="left" fontSize={14}>
+            </Text>
+            <Text textAlign="left" fontSize={14}>
               {friend.email}
-            </ParagraphText>
-            <ParagraphText textAlign="left" fontSize={14}>
+            </Text>
+            <Text textAlign="left" fontSize={14}>
               {friend.dateOfBirth}
-            </ParagraphText>
-          </ContactDetailsContainer>
-        </ContactContainer>
-      </Content>
+            </Text>
+          </FlexContainer>
+        </FlexContainer>
+      </FlexContainer>
     </ProfilePanelContainer>
   );
 };
