@@ -19,13 +19,13 @@ const ProfilePanel = ({ friend, setProfile }) => {
     <ProfilePanelContainer width={0.2} bg="white">
       <FlexContainer flexDirection="column" m={8}>
         <FlexContainer justifyContent="flex-end" m={10}>
-          <Button opacity="30%" onClick={closeProfile}>
+          <Button opacity="30%" onClick={closeProfile} m={0}>
             <Text textAlign="right" fontSize={20} m={0}>
               X
             </Text>
           </Button>
         </FlexContainer>
-        <FlexContainer flexDirection="column">
+        <FlexContainer flexDirection="column" justifyContent="center">
           <FlexContainer flexDirection="column" justifyContent="center" mx={-10} mb={15}>
             {friend.status === 'Online' ? (
               <>
@@ -67,10 +67,10 @@ const ProfilePanel = ({ friend, setProfile }) => {
               <ImageIcon alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
             </IconButton>
             <IconButton>
-              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/twitter.png')} />
+              <ImageIcon alt="twitter" src={require('../../assets/socialMedia/twitter.png')} />
             </IconButton>
             <IconButton>
-              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/instagram.png')} />
+              <ImageIcon alt="instagram" src={require('../../assets/socialMedia/instagram.png')} />
             </IconButton>
           </FlexContainer>
         </FlexContainer>

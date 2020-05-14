@@ -1,13 +1,17 @@
-import React from 'react';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import React, { useState } from 'react';
 
 import friends from '../../data/friends';
-import { FlexContainer, Searchbar, Input, Image, Button } from '../styles/FriendListPanelStyles';
+import { FlexContainer, Searchbar, Input, Image } from '../styles/FriendListPanelStyles';
 import { Text } from '../styles/globalStyle';
-import FriendCard from './FriendCard';
+import FriendCardContainer from './FriendCardContainer';
 
-const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, buttonColor }) => {
+const FriendListPanel = ({ setProfile, profile, setFriend }) => {
+  const [buttonHighlight, setButtonHighlight] = useState(0);
+
   return (
-    <FlexContainer width={0.27} flexDirection="column" mx={28} my={12}>
+    <FlexContainer width={0.26} flexDirection="column" mx={28} my={12}>
       <FlexContainer justifyContent="space-between" mb={10}>
         <Searchbar width={0.8} borderRadius={50} bg="searchbarGrey1">
           <img alt="search" src={require('../../assets/icons/search.png')} />
@@ -40,24 +44,22 @@ const FriendListPanel = ({ setProfile, profile, setFriend, setButtonColor, butto
             Add New
           </Text>
           <div>
-            <Button borderRadius={50} mt={4} color="white" bg="tomato">
-              <Text mt={0} textAlign="center" fontSize={28}>
-                +
-              </Text>
-            </Button>
+            <Fab size="small" color="primary" aria-label="add">
+              <AddIcon />
+            </Fab>
           </div>
         </FlexContainer>
       </FlexContainer>
       {friends.map((selectedFriend) => {
         return (
-          <FriendCard
+          <FriendCardContainer
             key={selectedFriend.userdId}
             selectedFriend={selectedFriend}
             setProfile={setProfile}
             profile={profile}
             setFriend={setFriend}
-            setButtonColor={setButtonColor}
-            buttonColor={buttonColor}
+            buttonHighlight={buttonHighlight}
+            setButtonHighlight={setButtonHighlight}
           />
         );
       })}

@@ -1,14 +1,13 @@
 import Avatar from '@material-ui/core/Avatar';
 import Badge from '@material-ui/core/Badge';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
-import { color, space, typography, width } from 'styled-system';
+import { color, space, typography } from 'styled-system';
 
 export const Text = styled.p`
   ${color}
   ${space}
   ${typography}
-
 `;
 
 // for green online dot in navBar
@@ -43,6 +42,7 @@ export const StyledBadgeOffline = withStyles(() => ({
   },
 }))(Badge);
 
+// for avatars
 export const MediumAvatar = withStyles(() => ({
   root: {
     width: 46,

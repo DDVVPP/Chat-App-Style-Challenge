@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { color, space, typography, width } from 'styled-system';
+import { color, typography, width, space } from 'styled-system';
 
 import ChatPanel from './ChatPanel';
 import FriendListPanel from './FriendListPanel';
@@ -10,6 +10,7 @@ const FlexContainer = styled.div`
   ${color}
   ${typography}
   ${width}
+  ${space}
 display: flex;
 `;
 
@@ -18,7 +19,7 @@ const DirectMessaging = () => {
   const [friend, setFriend] = useState({});
 
   return (
-    <FlexContainer fontFamily="Lato" bg="backgroundGrey" width={1}>
+    <FlexContainer fontFamily="Lato" bg="backgroundGrey" m={0} width={1}>
       <FriendListPanel setProfile={setProfile} profile={profile} setFriend={setFriend} />
       {profile
         ? [

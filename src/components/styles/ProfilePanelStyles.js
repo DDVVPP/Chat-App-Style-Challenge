@@ -1,12 +1,12 @@
-import Avatar from '@material-ui/core/Avatar';
 import Badge from '@material-ui/core/Badge';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import { color, width, space, flexbox } from 'styled-system';
 
 export const ProfilePanelContainer = styled.div`
   ${color}
   ${width}
+  ${space}
   border-left: 1px;
   flex: 1 0 1;
 `;
@@ -36,9 +36,6 @@ export const StyledBadgeProfileOffline = withStyles(() => ({
     width: 15,
     height: 15,
     borderRadius: 50,
-    // '&::after' {
-    //   border
-    // }
   },
 }))(Badge);
 
@@ -63,7 +60,8 @@ export const Button = styled.button`
   cursor: pointer;
   outline: none;
   ${color}
-  &: hover {
+  &:hover {
     opacity: 100%;
   }
+  ${width}
 `;
