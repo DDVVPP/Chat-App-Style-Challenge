@@ -19,15 +19,17 @@ const theme = {
     left: 'left',
     right: 'right',
   },
-  space: [-4, -2, 0, 2, 4, 6, 7, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 40, 50],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   borderWidths: [0.5, 1, 1.5, 6],
   borderStyles: {
     solid: 'solid',
   },
   radii: [1, 2, 3, 4, 16, 50],
-  // breakpoints: ['40em', '52em', '64em'],
 
-  // wasn't quite sure how to implement this appropriately
+  // I wasn't quite sure how to implement this appropriately
+  // I attempted to at FriendListPanel.js
+  m: [0, 1, 2],
+  breakpoints: ['500px', '1400px', '2000px'],
   mediaQueries: {
     small: `@media screen and (min-width: 500px`,
     medium: `@media screen and (min-width: 1400px)`,

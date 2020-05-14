@@ -1,6 +1,6 @@
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import React, { useState } from 'react';
+import React from 'react';
 
 import friends from '../../data/friends';
 import { FlexContainer, Searchbar, Input, Image } from '../styles/FriendListPanelStyles';
@@ -9,8 +9,13 @@ import FriendCardContainer from './FriendCardContainer';
 
 const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) => {
   return (
-    <FlexContainer width={0.26} flexDirection="column" mx={28} my={12}>
-      <FlexContainer justifyContent="space-between" mb={10}>
+    <FlexContainer // My attempt at breakpoints: width={{ small: 1, medium: 1, large: 0.26 }}
+      width="400px"
+      flexDirection="column"
+      mx={4}
+      my={3}
+    >
+      <FlexContainer justifyContent="space-between" mb={3}>
         <Searchbar width={0.8} borderRadius={50} bg="searchbarGrey1">
           <img alt="search" src={require('../../assets/icons/search.png')} />
           <Input
@@ -22,23 +27,23 @@ const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) 
           />
         </Searchbar>
         <FlexContainer justifyContent="flex-end" width={0.3}>
-          <Text mr={4} opacity="30%" fontSize={14}>
+          <Text mr={3} opacity="30%" fontSize={14}>
             147
           </Text>
-          <Image ml={6} alt="badge" src={require('../../assets/icons/starBadge.png')} />
+          <Image alt="badge" src={require('../../assets/icons/starBadge.png')} />
         </FlexContainer>
       </FlexContainer>
-      <FlexContainer justifyContent="space-between" mb={0}>
+      <FlexContainer justifyContent="space-between" mb={3}>
         <FlexContainer>
-          <Text mr={6} opacity="30%" fontSize={14}>
-            Flex By:
+          <Text mr={3} opacity="30%" fontSize={14}>
+            Sort By:
           </Text>
           <Text textAlign="left" fontSize={14}>
             Latest First
           </Text>
         </FlexContainer>
         <FlexContainer justifyContent="flex-end" width={0.3}>
-          <Text mr={6} opacity="30%" fontSize={14}>
+          <Text mr={3} opacity="30%" fontSize={14}>
             Add New
           </Text>
           <div>

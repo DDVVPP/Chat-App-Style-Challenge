@@ -23,10 +23,10 @@ const NavigationPanel = () => {
       flexDirection="column"
       justifyContent="space-between"
       bg="deepBlue"
-      width={0.05}
+      width="95px"
     >
       <InnerContainer mb={0} width={1}>
-        <UserImageContainer justifyContent="center" mt={16} mb={-32}>
+        <UserImageContainer justifyContent="center" mt={4} mb={-8}>
           <StyledBadgeNavOnline
             overlap="circle"
             anchorOrigin={{
@@ -83,16 +83,14 @@ const NavigationPanel = () => {
           </Button>
         </InnerContainer>
       </InnerContainer>
-      {/* <ButtonSettingsContainer mb={16}> */}
       <Button
-        mb={16}
+        mb={4}
         opacity="50%"
         bg="transparent"
         onClick={() => (window.location.pathname = '/settings')}
       >
         <img src={settings} alt="settings" />
       </Button>
-      {/* </ButtonSettingsContainer> */}
     </NavigationContainer>
   );
 };

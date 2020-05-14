@@ -16,11 +16,12 @@ const FriendCardContainer = ({ selectedFriend, setProfile, setFriend, userId, se
   };
 
   return (
-    <FriendCardFlexContainer borderRadius={4} flexDirection="column" mt={12}>
+    <FriendCardFlexContainer borderRadius={4} flexDirection="column" mt={3}>
       {userId === selectedFriend.userId ? (
         <ButtonHighlighted
           borderRadius={4}
-          borderLeft="4px solid"
+          borderLeft="solid"
+          borderLeftWidth={6}
           borderRight="none"
           borderTop="none"
           borderBottom="none"

@@ -5,7 +5,7 @@ import { Text, MediumAvatar, StyledBadgeOffline, StyledBadgeOnline } from '../st
 
 const FriendCard = ({ selectedFriend }) => {
   return (
-    <ContentContainer m={14}>
+    <ContentContainer m={3}>
       <FlexContainer justifyContent="space-between" width={1}>
         {selectedFriend.status === 'Online' ? (
           <StyledBadgeOnline
@@ -35,7 +35,7 @@ const FriendCard = ({ selectedFriend }) => {
             <Text fontWeight={700} m={0} fontSize={20}>
               {selectedFriend.firstName} {selectedFriend.lastName}
             </Text>
-            <Text mt={8} ml={0} opacity="50%" fontSize={14} textAlign="left">
+            <Text mt={2} ml={0} opacity="50%" fontSize={14} textAlign="left">
               {selectedFriend.status}
             </Text>
           </FlexContainer>

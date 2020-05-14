@@ -18,8 +18,8 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
   };
   return (
     <ProfilePanelContainer width={0.2} bg="white">
-      <FlexContainer flexDirection="column" m={8}>
-        <FlexContainer justifyContent="flex-end" m={10}>
+      <FlexContainer flexDirection="column" m={3}>
+        <FlexContainer justifyContent="flex-end" m={3}>
           <Button opacity="30%" onClick={closeProfile} m={0}>
             <Text textAlign="right" fontSize={20} m={0}>
               X
@@ -27,7 +27,7 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
           </Button>
         </FlexContainer>
         <FlexContainer flexDirection="column" justifyContent="center">
-          <FlexContainer flexDirection="column" justifyContent="center" mx={-10} mb={15}>
+          <FlexContainer flexDirection="column" justifyContent="center" mx={-3} mb={3}>
             {friend.status === 'Online' ? (
               <>
                 <StyledBadgeProfileOnline
@@ -63,7 +63,7 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
           <Text textAlign="center" fontSize={14} my={0} mx={2}>
             {friend.aboutMe}
           </Text>
-          <FlexContainer justifyContent="center" m={16}>
+          <FlexContainer justifyContent="center" m={4}>
             <IconButton>
               <ImageIcon alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
             </IconButton>
@@ -76,7 +76,7 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
           </FlexContainer>
         </FlexContainer>
         <FlexContainer>
-          <FlexContainer mr={6} flexDirection="column">
+          <FlexContainer mr={3} flexDirection="column">
             <Text textAlign="right" fontSize={14} fontWeight={600} opacity="30%">
               Phone:
             </Text>

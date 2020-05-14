@@ -15,12 +15,12 @@ const ChatPanel = ({ friend }) => {
     <FlexContainer
       flexDirection="column"
       width={0.5}
-      borderRightStyle="solid"
+      borderRight="solid"
+      borderRightWidth={0.5}
       borderColor="lightGrey"
-      borderWidth={0.5}
       bg="white"
     >
-      <ContentContainer flexDirection="column" justifyContent="space-between" m={16}>
+      <ContentContainer flexDirection="column" justifyContent="space-between" mb={3} mx={4} mt={4}>
         <FlexContainer width={1}>
           {friend.status === 'Online' ? (
             <StyledBadgeOnline
@@ -45,13 +45,12 @@ const ChatPanel = ({ friend }) => {
               <MediumAvatar alt="current user" src={friend.profilePhoto} />
             </StyledBadgeOffline>
           )}
-          {/* <ImageUser mr={14} mt={0} src={friend.profilePhoto} alt="profile" /> */}
           <FlexContainer justifyContent="space-between" width={1}>
             <FlexContainer flexDirection="column" justifyContent="flex-start">
               <Text fontWeight={700} m={0} fontSize={18}>
                 {friend.firstName} {friend.lastName}
               </Text>
-              <Text mt={8} ml={0} opacity="50%" fontSize={14} textAlign="left">
+              <Text mt={2} ml={0} opacity="50%" fontSize={14} textAlign="left">
                 {friend.status} {friend.timeStamp}
               </Text>
             </FlexContainer>
@@ -60,7 +59,7 @@ const ChatPanel = ({ friend }) => {
             </Text>
           </FlexContainer>
         </FlexContainer>
-        <FlexContainer p={8} bg="searchbarGrey2" border="none" borderRadius={50}>
+        <FlexContainer p={2} bg="searchbarGrey2" border="none" borderRadius={50}>
           <Button>
             <Image alt="search" src={require('../../assets/icons/paperclip.png')} />
           </Button>

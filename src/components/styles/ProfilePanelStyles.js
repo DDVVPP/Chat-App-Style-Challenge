@@ -50,7 +50,7 @@ export const IconButton = styled.button`
 `;
 export const ImageIcon = styled.img`
   align-self: center;
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
 `;
 export const Button = styled.button`
