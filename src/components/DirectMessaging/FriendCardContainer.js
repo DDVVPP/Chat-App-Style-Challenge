@@ -1,37 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   FriendCardFlexContainer,
-  ContentContainer,
   Button,
   ButtonHighlighted,
-  FlexContainer,
 } from '../styles/FriendCardContainerStyles';
-import { Text, MediumAvatar, StyledBadgeOffline, StyledBadgeOnline } from '../styles/globalStyle';
 import FriendCard from './FriendCard';
 
-const FriendCardContainer = ({
-  selectedFriend,
-  setProfile,
-  setFriend,
-  color,
-  setColor,
-  buttonHighlight,
-  setButtonHighlight,
-}) => {
+const FriendCardContainer = ({ selectedFriend, setProfile, setFriend, userId, setUserId }) => {
   const ChatAndProfile = () => {
     setProfile(true);
     setFriend(selectedFriend);
 
-    setButtonHighlight(selectedFriend.userId);
+    setUserId(selectedFriend.userId);
   };
 
   return (
     <FriendCardFlexContainer borderRadius={4} flexDirection="column" mt={12}>
-      {buttonHighlight === selectedFriend.userId ? (
+      {userId === selectedFriend.userId ? (
         <ButtonHighlighted
           borderRadius={4}
-          border="none"
+          borderLeft="4px solid"
+          borderRight="none"
+          borderTop="none"
+          borderBottom="none"
+          borderColor="tomato"
           color="white"
           bg="deepBlue"
           type="button"

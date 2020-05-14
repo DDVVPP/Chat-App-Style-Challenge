@@ -7,9 +7,7 @@ import { FlexContainer, Searchbar, Input, Image } from '../styles/FriendListPane
 import { Text } from '../styles/globalStyle';
 import FriendCardContainer from './FriendCardContainer';
 
-const FriendListPanel = ({ setProfile, profile, setFriend }) => {
-  const [buttonHighlight, setButtonHighlight] = useState(0);
-
+const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) => {
   return (
     <FlexContainer width={0.26} flexDirection="column" mx={28} my={12}>
       <FlexContainer justifyContent="space-between" mb={10}>
@@ -58,8 +56,8 @@ const FriendListPanel = ({ setProfile, profile, setFriend }) => {
             setProfile={setProfile}
             profile={profile}
             setFriend={setFriend}
-            buttonHighlight={buttonHighlight}
-            setButtonHighlight={setButtonHighlight}
+            userId={userId}
+            setUserId={setUserId}
           />
         );
       })}

@@ -11,9 +11,10 @@ import {
 } from '../styles/ProfilePanelStyles';
 import { Text, LargeAvatar } from '../styles/globalStyle';
 
-const ProfilePanel = ({ friend, setProfile }) => {
+const ProfilePanel = ({ friend, setProfile, setUserId }) => {
   const closeProfile = () => {
     setProfile(false);
+    setUserId(0);
   };
   return (
     <ProfilePanelContainer width={0.2} bg="white">
