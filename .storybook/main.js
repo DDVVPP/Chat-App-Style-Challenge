@@ -6,5 +6,4 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-knobs/register',
   ],
-  styles: ['../src/components/styles/theme.js'],
 };
