@@ -19,7 +19,6 @@ import {
 import { MediumAvatar, StyledBadgeNavOnline } from '../styles/globalStyle';
 
 const NavigationPanel = () => {
-  // const [opacity, setOpacity] = useState('50%');
   const [opacity, setOpacity] = useState([
     { home: '50%' },
     { send: '50%' },
@@ -29,16 +28,6 @@ const NavigationPanel = () => {
     { options: '50%' },
     { settings: '50%' },
   ]);
-
-  // const setClickedIcons = (iconName) => {
-  //   clickedIcons.map((iconObj) => {
-  //     if (iconObj[iconName] === false) {
-  //       iconObj[iconName] = true;
-  //     }
-
-  //     return clickedIcons;
-  //   });
-  // };
 
   return (
     <NavigationContainer

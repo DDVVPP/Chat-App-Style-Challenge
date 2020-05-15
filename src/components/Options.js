@@ -1,22 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-`;
-
-const NameText = styled.h1`
-  font-size: 18px;
-  text-align: center;
-`;
+import { PlaceHolderContainer, Text } from './styles/globalStyle';
 
 const Options = () => {
   return (
-    <Wrapper>
-      <NameText>Options</NameText>
-    </Wrapper>
+    <PlaceHolderContainer>
+      <Text textAlign="center" fontFamily="Lato" fontSize={32} fontWeight="700">
+        Options
+      </Text>
+    </PlaceHolderContainer>
   );
 };
 

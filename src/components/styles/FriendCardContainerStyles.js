@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { color, space, width, flexbox, borderRadius, border, shadow } from 'styled-system';
+import { color, space, flexbox, borderRadius, border, shadow } from 'styled-system';
+
+import theme from './theme';
 
 export const FriendCardFlexContainer = styled.div`
   display: flex;
@@ -9,16 +11,15 @@ export const FriendCardFlexContainer = styled.div`
 
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 `;
-export const ContentContainer = styled.div`
-  ${space}
-`;
 export const Button = styled.button`
   ${borderRadius}
   ${border}
+  ${color}
   cursor: pointer;
   outline: none;
   &:hover {
-    ${color}
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.deepBlue}
   }
 `;
 export const ButtonHighlighted = styled.button`
@@ -28,14 +29,4 @@ export const ButtonHighlighted = styled.button`
   ${shadow}
   cursor: pointer;
   outline: none;
-`;
-export const FlexContainer = styled.div`
-  display: flex;
-  ${flexbox}
-  ${width}
-`;
-export const ImageUser = styled.img`
-  width: 15%;
-  height: 15%;
-  ${space}
 `;

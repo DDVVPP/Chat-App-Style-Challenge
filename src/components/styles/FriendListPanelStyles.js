@@ -35,16 +35,3 @@ export const Image = styled.img`
   max-width: 20%;
   height: auto;
 `;
-export const Button = styled.button`
-  ${color}
-  ${space}
-  cursor: pointer;
-  width: 100%;
-  height: 50%;
-  ${borderRadius}
-  transition-duration: 0.4s;
-  outline: none;
-  &:hover {
-    ${color}
-  }
-`;

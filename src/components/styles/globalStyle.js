@@ -81,3 +81,10 @@ export const LargeAvatar = withStyles(() => ({
     marginLeft: '30%',
   },
 }))(Avatar);
+
+// for Navbar placeholder components
+export const PlaceHolderContainer = styled.div`
+  ${color}
+  height: 100vh;
+  width: 100vw;
+`;
