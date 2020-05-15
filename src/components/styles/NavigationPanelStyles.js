@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, space, width, flexbox } from 'styled-system';
+import { color, space, width, flexbox, border, shadow } from 'styled-system';
 
 export const NavigationContainer = styled.div`
   ${color}
@@ -22,7 +22,9 @@ export const UserImageContainer = styled.div`
 `;
 
 export const Button = styled.button`
+  ${border}
   ${color}
+  ${shadow}
   ${space}
   border: none;
   cursor: pointer;
@@ -31,6 +33,7 @@ export const Button = styled.button`
   &:hover {
     opacity: 1;
   }
+
   img {
     width: 40%;
     height: auto;

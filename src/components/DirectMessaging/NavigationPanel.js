@@ -21,14 +21,14 @@ import {
 import { MediumAvatar, StyledBadgeNavOnline } from '../styles/globalStyle';
 
 const NavigationPanel = () => {
-  const [opacity, setOpacity] = useState([
-    { home: '50%' },
-    { send: '50%' },
-    { inbox: '50%' },
-    { users: '50%' },
-    { notifications: '50%' },
-    { options: '50%' },
-    { settings: '50%' },
+  const [highlight, setHighlight] = useState([
+    { home: ['50%', 'none'] },
+    { send: ['50%', 'none'] },
+    { inbox: ['50%', 'none'] },
+    { users: ['50%', 'none'] },
+    { notifications: ['50%', 'none'] },
+    { options: ['50%', 'none'] },
+    { settings: ['50%', 'none'] },
   ]);
 
   return (
@@ -54,17 +54,19 @@ const NavigationPanel = () => {
         <InnerContainer>
           <Link to="/home">
             <Button
-              opacity={opacity[0].home}
+              py={2}
+              boxShadow={highlight[0].home[1]}
+              opacity={highlight[0].home[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '100%' },
-                  { send: '50%' },
-                  { inbox: '50%' },
-                  { users: '50%' },
-                  { notifications: '50%' },
-                  { options: '50%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { send: ['50%', 'none'] },
+                  { inbox: ['50%', 'none'] },
+                  { users: ['50%', 'none'] },
+                  { notifications: ['50%', 'none'] },
+                  { options: ['50%', 'none'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -73,17 +75,19 @@ const NavigationPanel = () => {
           </Link>
           <Link to="/send">
             <Button
-              opacity={opacity[1].send}
+              py={2}
+              boxShadow={highlight[1].send[1]}
+              opacity={highlight[1].send[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '50%' },
-                  { send: '100%' },
-                  { inbox: '50%' },
-                  { users: '50%' },
-                  { notifications: '50%' },
-                  { options: '50%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['50%', 'none'] },
+                  { send: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { inbox: ['50%', 'none'] },
+                  { users: ['50%', 'none'] },
+                  { notifications: ['50%', 'none'] },
+                  { options: ['50%', 'none'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -92,17 +96,19 @@ const NavigationPanel = () => {
           </Link>
           <Link to="/inbox">
             <Button
-              opacity={opacity[2].inbox}
+              py={2}
+              boxShadow={highlight[2].inbox[1]}
+              opacity={highlight[2].inbox[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '50%' },
-                  { send: '50%' },
-                  { inbox: '100%' },
-                  { users: '50%' },
-                  { notifications: '50%' },
-                  { options: '50%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['50%', 'none'] },
+                  { send: ['50%', 'none'] },
+                  { inbox: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { users: ['50%', 'none'] },
+                  { notifications: ['50%', 'none'] },
+                  { options: ['50%', 'none'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -111,17 +117,19 @@ const NavigationPanel = () => {
           </Link>
           <Link to="/users">
             <Button
-              opacity={opacity[3].users}
+              py={2}
+              boxShadow={highlight[3].users[1]}
+              opacity={highlight[3].users[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '50%' },
-                  { send: '50%' },
-                  { inbox: '50%' },
-                  { users: '100%' },
-                  { notifications: '50%' },
-                  { options: '50%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['50%', 'none'] },
+                  { send: ['50%', 'none'] },
+                  { inbox: ['50%', 'none'] },
+                  { users: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { notifications: ['50%', 'none'] },
+                  { options: ['50%', 'none'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -130,17 +138,19 @@ const NavigationPanel = () => {
           </Link>
           <Link to="notifications">
             <Button
-              opacity={opacity[4].notifications}
+              py={2}
+              boxShadow={highlight[4].notifications[1]}
+              opacity={highlight[4].notifications[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '50%' },
-                  { send: '50%' },
-                  { inbox: '50%' },
-                  { users: '50%' },
-                  { notifications: '100%' },
-                  { options: '50%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['50%', 'none'] },
+                  { send: ['50%', 'none'] },
+                  { inbox: ['50%', 'none'] },
+                  { users: ['50%', 'none'] },
+                  { notifications: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { options: ['50%', 'none'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -149,17 +159,19 @@ const NavigationPanel = () => {
           </Link>
           <Link to="options">
             <Button
-              opacity={opacity[5].options}
+              py={3}
+              boxShadow={highlight[5].options[1]}
+              opacity={highlight[5].options[0]}
               bg="transparent"
               onClick={() => {
-                setOpacity([
-                  { home: '50%' },
-                  { send: '50%' },
-                  { inbox: '50%' },
-                  { users: '50%' },
-                  { notifications: '50%' },
-                  { options: '100%' },
-                  { settings: '50%' },
+                setHighlight([
+                  { home: ['50%', 'none'] },
+                  { send: ['50%', 'none'] },
+                  { inbox: ['50%', 'none'] },
+                  { users: ['50%', 'none'] },
+                  { notifications: ['50%', 'none'] },
+                  { options: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
+                  { settings: ['50%', 'none'] },
                 ]);
               }}
             >
@@ -170,18 +182,20 @@ const NavigationPanel = () => {
       </InnerContainer>
       <Link to="settings">
         <Button
+          py={2}
           mb={4}
-          opacity={opacity[6].settings}
+          boxShadow={highlight[6].settings[1]}
+          opacity={highlight[6].settings}
           bg="transparent"
           onClick={() => {
-            setOpacity([
-              { home: '50%' },
-              { send: '50%' },
-              { inbox: '50%' },
-              { users: '50%' },
-              { notifications: '50%' },
-              { options: '50%' },
-              { settings: '100%' },
+            setHighlight([
+              { home: ['50%', 'none'] },
+              { send: ['50%', 'none'] },
+              { inbox: ['50%', 'none'] },
+              { users: ['50%', 'none'] },
+              { notifications: ['50%', 'none'] },
+              { options: ['50%', 'none'] },
+              { settings: ['100%', '12px 0px 7px -7px #ff3939 inset'] },
             ]);
           }}
         >

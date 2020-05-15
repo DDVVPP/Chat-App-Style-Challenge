@@ -12,6 +12,7 @@ const theme = {
     searchbarGrey1: '#e9e9e9',
     searchbarGrey2: '#f3f3f3',
     tomato: '#f34848',
+    highlightTomato: '#ff3939',
     deepBlue: '#292f4c',
   },
   textAlignment: {

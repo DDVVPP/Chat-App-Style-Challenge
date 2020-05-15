@@ -1,3 +1,4 @@
+import Divider from '@material-ui/core/Divider';
 import React from 'react';
 
 import { facebook, twitter, instagram } from '../../assets/index';
@@ -76,7 +77,8 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
             </IconButton>
           </FlexContainer>
         </FlexContainer>
-        <FlexContainer>
+        <Divider />
+        <FlexContainer my={3}>
           <FlexContainer mr={3} flexDirection="column">
             <Text textAlign="right" fontSize={14} fontWeight={600} opacity="30%">
               Phone:
@@ -100,6 +102,7 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
             </Text>
           </FlexContainer>
         </FlexContainer>
+        <Divider />
       </FlexContainer>
     </ProfilePanelContainer>
   );
