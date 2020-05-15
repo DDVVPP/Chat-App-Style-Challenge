@@ -27,7 +27,7 @@ const theme = {
   radii: [1, 2, 3, 4, 16, 50],
 
   // I wasn't quite sure how to implement this appropriately
-  // I attempted to at FriendListPanel.js
+  // You can see my attempt at FriendListPanel.js
   m: [0, 1, 2],
   breakpoints: ['500px', '1400px', '2000px'],
   mediaQueries: {

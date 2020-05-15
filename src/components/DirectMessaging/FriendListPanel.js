@@ -2,6 +2,7 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import React from 'react';
 
+import { starBadge, search } from '../../assets/index';
 import friends from '../../data/friends';
 import { FlexContainer, Searchbar, Input, Image } from '../styles/FriendListPanelStyles';
 import { Text } from '../styles/globalStyle';
@@ -9,7 +10,8 @@ import FriendCardContainer from './FriendCardContainer';
 
 const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) => {
   return (
-    <FlexContainer // My attempt at breakpoints: width={{ small: 1, medium: 1, large: 0.26 }}
+    <FlexContainer
+      // My attempt at breakpoints: width={{ small: 1, medium: 1, large: 0.26 }}
       width="400px"
       flexDirection="column"
       mx={4}
@@ -17,7 +19,7 @@ const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) 
     >
       <FlexContainer justifyContent="space-between" mb={3}>
         <Searchbar width={0.8} borderRadius={50} bg="searchbarGrey1">
-          <img alt="search" src={require('../../assets/icons/search.png')} />
+          <img alt="search" src={search} />
           <Input
             border="none"
             width={1}
@@ -30,7 +32,7 @@ const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) 
           <Text mr={3} opacity="30%" fontSize={14}>
             147
           </Text>
-          <Image alt="badge" src={require('../../assets/icons/starBadge.png')} />
+          <Image alt="badge" src={starBadge} />
         </FlexContainer>
       </FlexContainer>
       <FlexContainer justifyContent="space-between" mb={3}>
@@ -54,9 +56,10 @@ const FriendListPanel = ({ setProfile, profile, setFriend, userId, setUserId }) 
         </FlexContainer>
       </FlexContainer>
       {friends.map((selectedFriend) => {
+        const key = selectedFriend.userId.toString();
         return (
           <FriendCardContainer
-            key={selectedFriend.userdId}
+            key={key}
             selectedFriend={selectedFriend}
             setProfile={setProfile}
             profile={profile}

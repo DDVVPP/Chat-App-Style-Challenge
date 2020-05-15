@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { mic, emoji, paperclip } from '../../assets/index';
 import {
   ContentContainer,
   FlexContainer,
@@ -61,15 +62,15 @@ const ChatPanel = ({ friend }) => {
         </FlexContainer>
         <FlexContainer p={2} bg="searchbarGrey2" border="none" borderRadius={50}>
           <Button>
-            <Image alt="search" src={require('../../assets/icons/paperclip.png')} />
+            <Image alt="search" src={paperclip} />
           </Button>
           <Input width={1} bg="transparent" type="text" placeholder="Enter for search..." />
           <FlexContainer justifyContent="flex-end" width={0.3}>
             <Button>
-              <ImageEmojiMic alt="search" src={require('../../assets/icons/emoji.png')} />
+              <ImageEmojiMic alt="search" src={emoji} />
             </Button>
             <Button>
-              <ImageEmojiMic alt="search" src={require('../../assets/icons/mic.png')} />
+              <ImageEmojiMic alt="search" src={mic} />
             </Button>
           </FlexContainer>
         </FlexContainer>
