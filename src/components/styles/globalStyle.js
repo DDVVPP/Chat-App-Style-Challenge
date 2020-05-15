@@ -18,6 +18,7 @@ export const StyledBadgeNavOnline = withStyles(() => ({
   },
 }))(Badge);
 
+// for green online dot and white border
 export const StyledBadgeOnline = withStyles(() => ({
   badge: {
     backgroundColor: '#44b700',
@@ -30,6 +31,20 @@ export const StyledBadgeOnline = withStyles(() => ({
   },
 }))(Badge);
 
+// for green online dot
+export const StyledBadgeOnlineBlue = withStyles(() => ({
+  badge: {
+    backgroundColor: '#44b700',
+    boxShadow: `0 0 0 4px #292f4c`,
+  },
+  root: {
+    marginRight: 10,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+}))(Badge);
+
+// for grey offline dot
 export const StyledBadgeOffline = withStyles(() => ({
   badge: {
     backgroundColor: '#d6d6d6',
@@ -43,6 +58,15 @@ export const StyledBadgeOffline = withStyles(() => ({
 }))(Badge);
 
 // for avatars
+export const SmallAvatar = withStyles(() => ({
+  root: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#f34848',
+    fontSize: 14,
+    marginTop: 8,
+  },
+}))(Avatar);
 export const MediumAvatar = withStyles(() => ({
   root: {
     width: 46,

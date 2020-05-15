@@ -13,6 +13,8 @@ const friends = [
     dateOfBirth: 'November 2, 1990',
     messagesReceived: ['Placeholder', 'Analysis of foreign experience, as it is commo...'],
     timeStamp: '3h ago',
+    reply: false,
+    newMessages: true,
   },
   {
     userId: 2,
@@ -27,6 +29,8 @@ const friends = [
     dateOfBirth: 'March 25, 1992',
     messagesReceived: ['Placeholder', 'It seems logical that the strategy of providing!'],
     timeStamp: '14:45 pm',
+    reply: false,
+    newMessages: false,
   },
   {
     userId: 3,
@@ -44,6 +48,8 @@ const friends = [
       'I remember everything mate. See you later',
     ],
     timeStamp: '6:18 am',
+    reply: true,
+    newMessages: false,
   },
   {
     userId: 4,
@@ -58,6 +64,8 @@ const friends = [
     dateOfBirth: 'July 18, 1993',
     messagesReceived: ['Placeholder', 'I will miss you too, my dear!'],
     timeStamp: '15 Sep 2018',
+    reply: true,
+    newMessages: false,
   },
 ];
 

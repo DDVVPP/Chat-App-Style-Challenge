@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, space, width, flexbox, borderRadius, border } from 'styled-system';
+import { color, space, width, flexbox, borderRadius, border, shadow } from 'styled-system';
 
 export const FriendCardFlexContainer = styled.div`
   display: flex;
@@ -25,6 +25,7 @@ export const ButtonHighlighted = styled.button`
   ${borderRadius}
   ${border}
   ${color}
+  ${shadow}
   cursor: pointer;
   outline: none;
 `;

@@ -21,11 +21,12 @@ const FriendCardContainer = ({ selectedFriend, setProfile, setFriend, userId, se
         <ButtonHighlighted
           borderRadius={4}
           borderLeft="solid"
-          borderLeftWidth={6}
+          borderLeftWidth={4}
           borderRight="none"
           borderTop="none"
           borderBottom="none"
           borderColor="tomato"
+          boxShadow="10px 0px 10px -10px tomato inset"
           color="white"
           bg="deepBlue"
           type="button"

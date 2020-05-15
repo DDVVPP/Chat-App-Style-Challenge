@@ -1,7 +1,14 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 
-import { ContentContainer, FlexContainer } from '../styles/FriendCardStyles';
-import { Text, MediumAvatar, StyledBadgeOffline, StyledBadgeOnline } from '../styles/globalStyle';
+import { ContentContainer, FlexContainer, Image } from '../styles/FriendCardStyles';
+import {
+  Text,
+  MediumAvatar,
+  SmallAvatar,
+  StyledBadgeOffline,
+  StyledBadgeOnline,
+} from '../styles/globalStyle';
 
 const FriendCard = ({ selectedFriend }) => {
   return (
@@ -44,9 +51,25 @@ const FriendCard = ({ selectedFriend }) => {
           </Text>
         </FlexContainer>
       </FlexContainer>
-      <Text fontSize={14} textAlign="left">
-        {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
-      </Text>
+      {selectedFriend.reply ? (
+        <FlexContainer justifyContent="flex-start">
+          <Image m={2} alt="reply" src={require('../../assets/icons/reply.png')} />
+          <Text fontSize={14} textAlign="left" flexWrap="nowrap">
+            {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
+          </Text>
+        </FlexContainer>
+      ) : selectedFriend.newMessages ? (
+        <FlexContainer justifyContent="space-between">
+          <Text fontSize={14} textAlign="left" flexWrap="nowrap">
+            {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
+          </Text>
+          <SmallAvatar>2</SmallAvatar>
+        </FlexContainer>
+      ) : (
+        <Text fontSize={14} textAlign="left" flexWrap="nowrap">
+          {selectedFriend.messagesReceived[selectedFriend.messagesReceived.length - 1]}
+        </Text>
+      )}
     </ContentContainer>
   );
 };

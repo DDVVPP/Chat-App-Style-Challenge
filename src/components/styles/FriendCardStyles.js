@@ -38,3 +38,9 @@ export const ImageUser = styled.img`
   height: 15%;
   ${space}
 `;
+export const Image = styled.img`
+  align-self: center;
+  ${space}
+  max-width: 6%;
+  height: auto;
+`;
