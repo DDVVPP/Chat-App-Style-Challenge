@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { facebook, twitter, instagram } from '../../assets/index';
 import {
   ProfilePanelContainer,
   FlexContainer,
@@ -65,13 +66,13 @@ const ProfilePanel = ({ friend, setProfile, setUserId }) => {
           </Text>
           <FlexContainer justifyContent="center" m={4}>
             <IconButton>
-              <ImageIcon alt="facebook" src={require('../../assets/socialMedia/facebook.png')} />
+              <ImageIcon alt="facebook" src={facebook} />
             </IconButton>
             <IconButton>
-              <ImageIcon alt="twitter" src={require('../../assets/socialMedia/twitter.png')} />
+              <ImageIcon alt="twitter" src={twitter} />
             </IconButton>
             <IconButton>
-              <ImageIcon alt="instagram" src={require('../../assets/socialMedia/instagram.png')} />
+              <ImageIcon alt="instagram" src={instagram} />
             </IconButton>
           </FlexContainer>
         </FlexContainer>

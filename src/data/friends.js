@@ -1,10 +1,12 @@
+import { Donald, Anna, Tobias, Jennifer } from '../assets/index';
+
 const friends = [
   {
     userId: 1,
     firstName: 'Donald',
     lastName: 'Johnson',
     status: 'Online',
-    profilePhoto: require('../assets/users/Donald.png'),
+    profilePhoto: Donald,
     location: 'Texas, USA',
     aboutMe:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit id volutpat lacus laoreet non..',
@@ -21,7 +23,7 @@ const friends = [
     firstName: 'Anna',
     lastName: 'Dormun',
     status: 'Offline',
-    profilePhoto: require('../assets/users/Anna.png'),
+    profilePhoto: Anna,
     location: 'Berlin, Germany',
     aboutMe: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
     phone: '+(44) 07911 123456',
@@ -37,7 +39,7 @@ const friends = [
     firstName: 'Tobias',
     lastName: 'Williams',
     status: 'Offline',
-    profilePhoto: require('../assets/users/Tobias.png'),
+    profilePhoto: Tobias,
     location: 'Paris, France',
     aboutMe: 'Help people to build websites and apps + grow awareness in social media.',
     phone: '+(33 1) 45 55 01 10',
@@ -55,7 +57,7 @@ const friends = [
     userId: 4,
     firstName: 'Jennifer',
     lastName: 'Watkins',
-    profilePhoto: require('../assets/users/Jennifer.png'),
+    profilePhoto: Jennifer,
     status: 'Online',
     location: 'London, UK',
     aboutMe: 'Neque viverra justo nec ultrices dui sapien eget mi. Morbi tempus iaculis urna.',

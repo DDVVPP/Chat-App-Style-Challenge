@@ -2,14 +2,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import home from '../../assets/icons/home.png';
-import inbox from '../../assets/icons/inbox.png';
-import notifications from '../../assets/icons/notifications.png';
-import options from '../../assets/icons/options.png';
-import sendWhite from '../../assets/icons/sendWhite.png';
-import settings from '../../assets/icons/settings.png';
-import users from '../../assets/icons/users.png';
-import currentUser from '../../assets/users/MainUser.png';
+import {
+  home,
+  inbox,
+  notifications,
+  options,
+  sendWhite,
+  settings,
+  users,
+  currentUser,
+} from '../../assets/index';
 import {
   NavigationContainer,
   InnerContainer,
@@ -192,7 +194,33 @@ const NavigationPanel = () => {
 
 export default NavigationPanel;
 
-// Alternate: use of material-ui's badge.  Chose not to use it because it seems to require more code than what's implemented above.
+// ALTERNATE ATTEMPT: use Material-Ui list items to highlight navbar links.  Unable to customize icons' opacity onClick, and unable to access background highlight color;
+
+/* import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+const handleListItemClick = (event, index) => {
+  setSelectedIndex(index);
+};
+<List component="nav" aria-label="main mailbox folders">
+  <ListItem
+    button
+    selected={selectedIndex === 0}
+    onClick={(event) => handleListItemClick(event, 0)}
+  >
+    <img src={home} alt="home" />
+  </ListItem>
+  <ListItem
+    button
+    selected={selectedIndex === 1}
+    onClick={(event) => handleListItemClick(event, 1)}
+  >
+    <img src={sendWhite} alt="send" />
+  </ListItem>
+</List>; */
+
+// ALTERNATE ATTEMPT: use of material-ui's badge.  Chose not to use it because it seems to require more code than what's implemented above.
 
 /* export const StyledBadgeNavRed = withStyles(() => ({
   badge: {
