@@ -27,6 +27,7 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   transition-duration: 0.4s;
+  outline: none;
   &:hover {
     opacity: 1;
   }

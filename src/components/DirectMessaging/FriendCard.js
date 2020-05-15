@@ -51,6 +51,7 @@ const FriendCard = ({ selectedFriend }) => {
           </Text>
         </FlexContainer>
       </FlexContainer>
+      {/* Messages with the new messages icon require a 'space-between' div, messages with the replied icon and messages with no icon require a 'flex-start' div which is why <Text> is repeated for each condition.  */}
       {selectedFriend.reply ? (
         <FlexContainer justifyContent="flex-start">
           <Image m={2} alt="reply" src={require('../../assets/icons/reply.png')} />
