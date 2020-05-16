@@ -6,4 +6,5 @@ Pecheritsa using **Styled Components**, **Styled Sytems**, **Material-UI**, and 
 ## Start
 
 `npm install`<br /> `npm start`<br />
-`Open [http://localhost:3000](http://localhost:3000) to view it in the browser.`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br/>
+`yarn storybook` for Storybook start
