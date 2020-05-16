@@ -10,6 +10,7 @@ import theme from './components/styles/theme';
 import history from './history';
 import Routes from './routes';
 
+// I didn't think it was necessary to create an extra style file specific to this file, for just one style component
 export const FlexContainer = styled.div`
   height: 100vh;
   display: flex;

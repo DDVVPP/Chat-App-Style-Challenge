@@ -208,7 +208,7 @@ const NavigationPanel = () => {
 
 export default NavigationPanel;
 
-/* ------------------ ALTERNATE ATTEMPT:------------------- */
+/* ------------------ ALTERNATE ATTEMPT ------------------- */
 // Use Material-Ui list items to highlight navbar links.  Unable to customize icons' opacity onClick, and unable to access background highlight color. If I had more time I would dive into this further.
 
 /* import List from '@material-ui/core/List';
@@ -235,8 +235,8 @@ const handleListItemClick = (event, index) => {
   </ListItem>
 </List>; */
 
-/* ------------------ ALTERNATE ATTEMPT:-------------------- */
-// Use of material-ui's badge.  Chose not to use it because it seems to require more code than what's implemented above.
+/* ------------------ ALTERNATE ATTEMPT -------------------- */
+// Use of material-ui's badge.  Chose not to use it because it seems to require more code per button than what's implemented above.
 
 /* export const StyledBadgeNavRed = withStyles(() => ({
   badge: {

@@ -6,6 +6,7 @@ import ChatPanel from './ChatPanel';
 import FriendListPanel from './FriendListPanel';
 import ProfilePanel from './ProfilePanel';
 
+// I didn't think it was necessary to create an extra style file specific to this file, for just one style component
 const FlexContainer = styled.div`
   ${color}
   ${typography}
