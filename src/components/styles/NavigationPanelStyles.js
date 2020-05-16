@@ -11,8 +11,7 @@ export const InnerContainer = styled.div`
   ${color}
   ${width}
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  ${flexbox}
   height: 70%;
 `;
 export const UserImageContainer = styled.div`
@@ -33,7 +32,6 @@ export const Button = styled.button`
   &:hover {
     opacity: 1;
   }
-
   img {
     width: 40%;
     height: auto;

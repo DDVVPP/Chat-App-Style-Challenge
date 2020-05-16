@@ -4,6 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import { color, space, typography } from 'styled-system';
 
+import theme from './theme';
+
 export const Text = styled.p`
   ${color}
   ${space}
@@ -13,29 +15,16 @@ export const Text = styled.p`
 // for green online dot in navBar
 export const StyledBadgeNavOnline = withStyles(() => ({
   badge: {
-    backgroundColor: '#44b700',
-    boxShadow: `0 0 0 4px #292f4c`,
+    backgroundColor: theme.colors.onlineGreen,
+    boxShadow: `0 0 0 4px ${theme.colors.deepBlue}`,
   },
 }))(Badge);
 
 // for green online dot and white border
 export const StyledBadgeOnline = withStyles(() => ({
   badge: {
-    backgroundColor: '#44b700',
-    boxShadow: `0 0 0 4px #fff`,
-  },
-  root: {
-    marginRight: 10,
-    display: 'flex',
-    justifyContent: 'center',
-  },
-}))(Badge);
-
-// for green online dot
-export const StyledBadgeOnlineBlue = withStyles(() => ({
-  badge: {
-    backgroundColor: '#44b700',
-    boxShadow: `0 0 0 4px #292f4c`,
+    backgroundColor: theme.colors.onlineGreen,
+    boxShadow: `0 0 0 4px ${theme.colors.white}`,
   },
   root: {
     marginRight: 10,
@@ -47,8 +36,8 @@ export const StyledBadgeOnlineBlue = withStyles(() => ({
 // for grey offline dot
 export const StyledBadgeOffline = withStyles(() => ({
   badge: {
-    backgroundColor: '#d6d6d6',
-    boxShadow: `0 0 0 4px #fff`,
+    backgroundColor: theme.colors.offLineGrey,
+    boxShadow: `0 0 0 4px ${theme.colors.white}`,
   },
   root: {
     marginRight: 10,
@@ -62,7 +51,7 @@ export const SmallAvatar = withStyles(() => ({
   root: {
     width: 30,
     height: 30,
-    backgroundColor: '#f34848',
+    backgroundColor: theme.colors.tomato,
     fontSize: 14,
     marginTop: 8,
   },
@@ -82,7 +71,7 @@ export const LargeAvatar = withStyles(() => ({
   },
 }))(Avatar);
 
-// for Navbar placeholder components
+// for Navbar links to placeholder components
 export const PlaceHolderContainer = styled.div`
   ${color}
   height: 100vh;

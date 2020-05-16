@@ -1,3 +1,5 @@
+// acts as a central place of image exports for easy import into other files
+
 import emoji from './icons/emoji.png';
 import home from './icons/home.png';
 import inbox from './icons/inbox.png';

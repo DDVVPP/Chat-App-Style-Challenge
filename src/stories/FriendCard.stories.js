@@ -1,10 +1,14 @@
-import { action } from '@storybook/addon-actions';
-import { text, withKnobs, object } from '@storybook/addon-knobs/';
-import { linkTo } from '@storybook/addon-links';
-import { storiesOf } from '@storybook/react';
+import { withKnobs, object } from '@storybook/addon-knobs/';
 import React from 'react';
 
 import FriendCard from '../components/DirectMessaging/FriendCard';
+
+export default {
+  title: 'Friend Card',
+  component: FriendCard,
+
+  decorators: [withKnobs],
+};
 
 const userDetails = {
   userId: 1,
@@ -18,13 +22,7 @@ const userDetails = {
   newMessages: true,
 };
 
-export default {
-  title: 'Friend Card',
-  component: FriendCard,
-  decorators: [withKnobs],
-};
-
-export const Card = () => <FriendCard selectedFriend={object('userDetails', { ...userDetails })} />;
+export const Card = () => <FriendCard selectedFriend={object('Friend', { ...userDetails })} />;
 
 Card.story = {
   name: 'Friend Card',

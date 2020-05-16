@@ -38,7 +38,7 @@ const NavigationPanel = () => {
       bg="deepBlue"
       width="95px"
     >
-      <InnerContainer mb={0} width={1}>
+      <InnerContainer mb={0} width={1} flexDirection="column" justifyContent="space-between">
         <UserImageContainer justifyContent="center" mt={4} mb={-8}>
           <StyledBadgeNavOnline
             overlap="circle"
@@ -51,7 +51,7 @@ const NavigationPanel = () => {
             <MediumAvatar alt="current user" src={currentUser} />
           </StyledBadgeNavOnline>
         </UserImageContainer>
-        <InnerContainer>
+        <InnerContainer flexDirection="column" justifyContent="space-between">
           <Link to="/home">
             <Button
               py={2}
@@ -208,7 +208,8 @@ const NavigationPanel = () => {
 
 export default NavigationPanel;
 
-// ALTERNATE ATTEMPT: use Material-Ui list items to highlight navbar links.  Unable to customize icons' opacity onClick, and unable to access background highlight color;
+/* ------------------ ALTERNATE ATTEMPT:------------------- */
+// Use Material-Ui list items to highlight navbar links.  Unable to customize icons' opacity onClick, and unable to access background highlight color. If I had more time I would dive into this further.
 
 /* import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -234,7 +235,8 @@ const handleListItemClick = (event, index) => {
   </ListItem>
 </List>; */
 
-// ALTERNATE ATTEMPT: use of material-ui's badge.  Chose not to use it because it seems to require more code than what's implemented above.
+/* ------------------ ALTERNATE ATTEMPT:-------------------- */
+// Use of material-ui's badge.  Chose not to use it because it seems to require more code than what's implemented above.
 
 /* export const StyledBadgeNavRed = withStyles(() => ({
   badge: {

@@ -7,6 +7,7 @@ const theme = {
     backgroundGrey: '#f1f1f1',
     lightGrey: '#eeeeee',
     offLineGrey: '#d6d6d6',
+    onlineGreen: '#44b700',
     black: '#000e1a',
     white: '#fff',
     searchbarGrey1: '#e9e9e9',

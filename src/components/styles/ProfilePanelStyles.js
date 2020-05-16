@@ -3,12 +3,12 @@ import { withStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import { color, width, space, flexbox } from 'styled-system';
 
+import theme from './theme';
+
 export const ProfilePanelContainer = styled.div`
   ${color}
   ${width}
   ${space}
-  border-left: 1px;
-  flex: 1 0 1;
 `;
 export const FlexContainer = styled.div`
   ${space}
@@ -17,8 +17,8 @@ export const FlexContainer = styled.div`
 `;
 export const StyledBadgeProfileOnline = withStyles(() => ({
   badge: {
-    backgroundColor: '#44b700',
-    boxShadow: `0 0 0 6px #fff`,
+    backgroundColor: theme.colors.onlineGreen,
+    boxShadow: `0 0 0 6px ${theme.colors.white}`,
     marginLeft: '22%',
     marginTop: '4%',
     width: 15,
@@ -29,8 +29,8 @@ export const StyledBadgeProfileOnline = withStyles(() => ({
 
 export const StyledBadgeProfileOffline = withStyles(() => ({
   badge: {
-    backgroundColor: '#d6d6d6',
-    boxShadow: `0 0 0 6px #fff`,
+    backgroundColor: theme.colors.offLineGrey,
+    boxShadow: `0 0 0 6px ${theme.colors.white}`,
     marginLeft: '22%',
     marginTop: '4%',
     width: 15,

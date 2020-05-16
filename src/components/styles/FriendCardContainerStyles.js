@@ -8,7 +8,6 @@ export const FriendCardFlexContainer = styled.div`
   ${flexbox}
   ${borderRadius}
   ${space}
-
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 `;
 export const Button = styled.button`
